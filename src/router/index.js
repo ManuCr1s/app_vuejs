@@ -8,7 +8,7 @@ const SignUpBasic = () =>
   );
 Vue.use(VueRouter);
 let authBasicPages = {
-    path: "/",
+    path: "/login",
     component: AuthBasicLayout,
     name: "Authentication Basic",
     children: [

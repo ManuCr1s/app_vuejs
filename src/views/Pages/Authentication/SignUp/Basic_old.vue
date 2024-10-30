@@ -13,7 +13,7 @@
             mx-4
           "
         >
-          <h4 class="text-h4 text-white font-weight-bold">Inicio Sesion</h4>
+          <h4 class="text-h4 text-white font-weight-bold">Register with</h4>
           <v-row class="mt-3">
             <v-col cols="2" class="ms-auto d-flex justify-center">
               <v-btn
@@ -63,36 +63,53 @@
               px-3
             "
           >
-            
+            or
           </p>
         </div>
         <div class="card-padding">
           <v-text-field
-            label="Dni"
-            placeholder="Dni"
+            label="Name"
+            placeholder="Name"
             color="#e91e63"
             required
             class="font-size-input input-style"
           ></v-text-field>
 
-          <!-- <v-text-field
+          <v-text-field
             label="Email"
             placeholder="Email"
             color="#e91e63"
             required
             class="font-size-input input-style"
-          ></v-text-field> -->
+          ></v-text-field>
 
           <v-text-field
-            label="Contraseña"
-            placeholder="Contraseña"
+            label="Password"
+            placeholder="Password"
             color="#e91e63"
             required
             type="password"
             class="font-size-input input-style"
           ></v-text-field>
 
-
+          <v-checkbox
+            v-model="checkbox"
+            color="#141727"
+            :ripple="false"
+            class="ma-0 checkbox-custom checkbox-thinner"
+            hide-details
+          >
+            <template v-slot:label>
+              <span class="text-body text-sm ls-0"
+                >I agree the
+                <a
+                  href="javascript:;"
+                  class="text-dark font-weight-bolder text-decoration-none"
+                  >Terms and Conditions</a
+                ></span
+              >
+            </template>
+          </v-checkbox>
 
           <v-btn
             elevation="0"
@@ -112,8 +129,16 @@
             "
             color="#5e72e4"
             small
-            >Ingresar</v-btn
+            >Sign Up</v-btn
           >
+          <p class="text-sm text-body mt-3 mb-0">
+            Already have an account?
+            <a
+              href="javascript:;"
+              class="text-dark text-decoration-none font-weight-bolder"
+              >Sign in</a
+            >
+          </p>
         </div>
       </v-card>
     </v-col>

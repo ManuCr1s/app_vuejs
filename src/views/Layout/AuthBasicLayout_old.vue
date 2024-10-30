@@ -8,10 +8,16 @@
         <span class="mask bg-gradient-default opacity-6"></span>
         <v-container class="my-auto">
           <v-row class="min-vh-100">
+            <app-bar-auth background="transparent" has-bg linkColor="white">
+            </app-bar-auth>
             <fade-transition :duration="200" origin="center top" mode="out-in">
               <!-- your content here -->
               <v-container class="pb-0 position-relative">
                 <router-view></router-view>
+                <content-footer
+                  auth
+                  v-if="!$route.meta.hideFooter"
+                ></content-footer>
               </v-container>
             </fade-transition>
           </v-row>
@@ -21,12 +27,16 @@
   </v-app>
 </template>
 <script>
+import AppBarAuth from "@/components/AppBarAuth";
 import { FadeTransition } from "vue2-transitions";
+import ContentFooter from "@/components/Footer.vue";
 
 export default {
   name: "page-layout",
   components: {
+    AppBarAuth,
     FadeTransition,
+    ContentFooter,
   },
   data() {
     return {
