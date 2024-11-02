@@ -1,6 +1,6 @@
 <template>
   <v-card class="card-shadow border-radius-xl px-4 py-4">
-    <h6 class="mb-4 text-h6 text-typo font-weight-bold">Población por Distrito</h6>
+    <h6 class="mb-4 text-h6 text-typo font-weight-bold">Sales by Age</h6>
     <div class="chart-area">
       <canvas :height="340" :id="salesAgeChartID"></canvas>
     </div>
@@ -27,7 +27,7 @@ export default {
             weight: 5,
             borderWidth: 0,
             borderRadius: 4,
-            backgroundColor: "#17c1e8",
+            backgroundColor: "#3A416F",
             data: [15, 20, 12, 60, 20, 15, 25],
             fill: false,
           },

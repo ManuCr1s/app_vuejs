@@ -13,8 +13,8 @@
             mx-4
           "
         >
-          <h4 class="text-h4 text-white font-weight-bold">Inicio Sesion</h4>
-          <v-row class="mt-3">
+          <h4 class="text-h4 text-white font-weight-bold">Iniciar Sesión</h4>
+          <!-- <v-row class="mt-3">
             <v-col cols="2" class="ms-auto d-flex justify-center">
               <v-btn
                 icon
@@ -48,10 +48,10 @@
                 <i class="fab fa-google text-white text-lg"></i>
               </v-btn>
             </v-col>
-          </v-row>
+          </v-row> -->
         </div>
         <div class="mt-2 position-relative text-center">
-          <p
+          <!-- <p
             class="
               text-sm
               font-weight-bold
@@ -64,15 +64,19 @@
             "
           >
             
-          </p>
+          </p> -->
         </div>
         <div class="card-padding">
           <v-text-field
-            label="Dni"
-            placeholder="Dni"
-            color="#e91e63"
+          v-model="dni"
+            label="DNI"
+            placeholder="DNI"
+            color="#3dc91e"
             required
             class="font-size-input input-style"
+            maxlength="8"
+            :rules="[v => (v && v.length === 8) || 'Debe ser de 8 dígitos']"
+            @keypress="onlyNumbers"
           ></v-text-field>
 
           <!-- <v-text-field
@@ -86,7 +90,7 @@
           <v-text-field
             label="Contraseña"
             placeholder="Contraseña"
-            color="#e91e63"
+            color="#3dc91e"
             required
             type="password"
             class="font-size-input input-style"
@@ -124,8 +128,15 @@ export default {
   name: "sign-up-basic",
   data() {
     return {
-      checkbox: false,
+      dni: "",
     };
+  },
+  methods: {
+    onlyNumbers(event) {
+      if (event.key < "0" || event.key > "9") {
+        event.preventDefault();
+      }
+    },
   },
 };
 </script>

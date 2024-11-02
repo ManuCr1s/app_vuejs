@@ -4,10 +4,11 @@
       <v-row class="mt-6 mb-5">
         <v-col lg="7">
           <v-card class="card-shadow bg-gradient-default border-radius-xl">
-            <v-img
+            <!-- style="background: linear-gradient(to bottom, #6be18f, #09d23e);" -->
+            <!-- <v-img
               src="@/assets/img/shapes/waves-white.svg"
               class="position-absolute opacity-2 start-0 top-0 w-100 h-100"
-            ></v-img>
+            ></v-img> -->
 
             <div class="px-8 pt-6">
               <v-row class="position-relative">
@@ -77,7 +78,7 @@
                         891 Limarenda road
                       </h6>
                     </div>
-                    <div class="ms-16 me-auto">
+                    <!-- <div class="ms-16 me-auto">
                       <v-btn
                         icon
                         outlined
@@ -90,7 +91,7 @@
                           >map</v-icon
                         >
                       </v-btn>
-                    </div>
+                    </div> -->
                   </div>
                 </v-col>
               </v-row>
@@ -254,9 +255,9 @@
         <v-col>
           <v-card class="bg-gradient-default border-radius-xl">
             <div class="px-6 py-6">
-              <v-row>
-                <v-col lg="4" md="6">
-                  <v-form class="d-inline-block" id="navbar-search-main">
+              <!-- <v-row>
+                <v-col lg="4" md="6"> -->
+                  <!-- <v-form class="d-inline-block" id="navbar-search-main">
                     <v-text-field
                       rounded-sm
                       hide-details
@@ -280,8 +281,8 @@
                         >
                       </template>
                     </v-text-field>
-                  </v-form>
-                </v-col>
+                  </v-form> -->
+                <!-- </v-col>
                 <v-col md="6" class="my-auto ms-auto">
                   <div class="d-flex align-center">
                     <v-tooltip top>
@@ -341,13 +342,13 @@
                     </h4>
                   </div>
                 </v-col>
-              </v-row>
-              <hr class="horizontal light mt-4 mb-4" />
+              </v-row> -->
+              <!-- <hr class="horizontal light mt-4 mb-4" /> -->
               <v-row>
                 <v-col lg="4" md="6">
                   <div class="d-flex align-center position-relative">
                     <h3 class="text-h3 font-weight-bolder text-white mb-1">
-                      11:13
+                      Provincia
                     </h3>
                     <p class="text-white opacity-8 mb-1 ms-3">
                       Estimated arrival time
@@ -358,9 +359,8 @@
                 <v-col lg="4" md="6">
                   <div class="d-flex align-center position-relative">
                     <h3
-                      class="text-h3 font-weight-bolder text-white mb-1 ms-auto"
-                    >
-                      2.4<small class="align-top text-sm">Km</small>
+                      class="text-h3 font-weight-bolder text-white mb-1 ms-auto">
+                      Distrito
                     </h3>
                     <p class="text-white opacity-8 mb-1 ms-3 me-auto">
                       Turn right in 2.4 miles
@@ -371,9 +371,8 @@
                 <v-col lg="4" md="6">
                   <div class="d-flex align-center position-relative">
                     <h3
-                      class="text-h3 font-weight-bolder text-white mb-1 ms-auto"
-                    >
-                      6.3<small class="align-top text-sm">Km</small>
+                      class="text-h3 font-weight-bolder text-white mb-1 ms-auto">
+                      Centro Poblado
                     </h3>
                     <p class="text-white opacity-8 mb-1 ms-3 me-auto">
                       Distance to Creative Tim
@@ -402,9 +401,9 @@
                   <div class="d-flex align-center">
                     <div class="position-relative">
                       <v-avatar size="58">
-                        <img src="@/assets/img/drake.jpeg" alt="Curved" />
+                        <!-- <img src="@/assets/img/drake.jpeg" alt="Curved" /> -->
                       </v-avatar>
-                      <img
+                      <!-- <img
                         class="
                           position-absolute
                           w-60
@@ -415,19 +414,19 @@
                         "
                         src="@/assets/img/small-logos/logo-spotify.svg"
                         alt="spotify logo"
-                      />
+                      /> -->
                     </div>
-                    <div class="px-3">
+                    <!-- <div class="px-3">
                       <p class="text-white text-sm font-weight-bold mb-0">
                         Scorpion (feat Quavo)
                       </p>
                       <p class="text-white text-xs mb-2 opacity-8">
                         Drake - Hip-Hop
                       </p>
-                    </div>
+                    </div> -->
                   </div>
                 </v-col>
-                <v-col lg="4" md="6">
+                <!-- <v-col lg="4" md="6">
                   <div class="d-flex align-center">
                     <v-btn
                       icon
@@ -507,7 +506,7 @@
                     </template>
                     <span>Track messages</span>
                   </v-tooltip>
-                </v-col>
+                </v-col> -->
               </v-row>
             </div>
           </v-card>
@@ -531,11 +530,11 @@ export default {
   data() {
     return {
       slider: "",
-      zoom: 11,
-      center: latLng(38.89, -77.03),
+      zoom: 15,
+      center: latLng(-10.685854, -76.256021),
       url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-      attribution:
-        '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+      // attribution:
+      //   '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       withPopup: latLng(47.41322, -1.219482),
       withTooltip: latLng(47.41422, -1.250482),
       currentZoom: 11.5,

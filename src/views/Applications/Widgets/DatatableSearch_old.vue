@@ -3,7 +3,7 @@
     <v-card class="card-shadow border-radius-xl">
       <div class="card-header-padding">
         <h5 class="font-weight-bold text-h5 text-typo mb-0">
-          Llamas
+          Datatable Search
         </h5>
         <p class="text-sm text-body font-weight-light mb-0">
           Features include sorting, searching, pagination, content-editing, and
@@ -42,7 +42,7 @@
                     solo
                     height="43"
                     v-model="search"
-                    placeholder="Buscar"
+                    placeholder="Search"
                   >
                     <template slot="prepend-inner">
                       <v-icon
@@ -75,7 +75,7 @@
                       px-6
                       ms-3
                     "
-                    >Nuevo registro</v-btn
+                    >New Item</v-btn
                   >
                 </template>
                 <v-card class="card-shadow border-radius-xl">
@@ -103,7 +103,7 @@
                             filled
                             solo
                             height="43"
-                            placeholder="Nombre"
+                            placeholder="Name"
                           ></v-text-field>
                         </v-col>
                         <v-col cols="6">
@@ -122,7 +122,7 @@
                             filled
                             solo
                             height="43"
-                            placeholder="Correo electrónico"
+                            placeholder="Email"
                           ></v-text-field>
                         </v-col>
                         <v-col cols="6">
@@ -141,7 +141,7 @@
                             filled
                             solo
                             height="43"
-                            placeholder="Edad"
+                            placeholder="Age"
                           ></v-text-field>
                         </v-col>
                         <v-col cols="6">
@@ -181,7 +181,7 @@
                         py-3
                         px-6
                       "
-                      >Cancelar</v-btn
+                      >Cancel</v-btn
                     >
 
                     <v-btn
@@ -197,7 +197,7 @@
                         py-3
                         px-6
                       "
-                      >Guardar</v-btn
+                      >Save</v-btn
                     >
                   </v-card-actions>
                 </v-card>
@@ -206,7 +206,7 @@
               <v-dialog v-model="dialogDelete" max-width="500px">
                 <v-card class="card-shadow card-padding border-radius-xl">
                   <v-card-title class="pt-0 text-h5 text-typo justify-center"
-                    >¿Desea eliminar este registro?</v-card-title
+                    >Are you sure you want to delete this item?</v-card-title
                   >
                   <v-card-actions class="pb-0">
                     <v-spacer></v-spacer>
@@ -224,7 +224,7 @@
                         py-3
                         px-6
                       "
-                      >Cancelar</v-btn
+                      >Cancel</v-btn
                     >
 
                     <v-btn
@@ -240,7 +240,7 @@
                         py-3
                         px-6
                       "
-                      >Aceptar</v-btn
+                      >OK</v-btn
                     >
                     <v-spacer></v-spacer>
                   </v-card-actions>
@@ -288,23 +288,7 @@
               color="#67748e"
             >
               <v-icon size="14" class="material-icons-round"
-                >remove_red_eye</v-icon
-              >
-            </v-btn>
-
-            <v-btn
-              @click="editItem(item)"
-              icon
-              elevation="0"
-              :ripple="false"
-              height="28"
-              min-width="36"
-              width="36"
-              class="btn-ls me-2 my-2 rounded-sm"
-              color="#67748e"
-            >
-              <v-icon size="14" class="material-icons-round"
-                >edit</v-icon
+                >construction</v-icon
               >
             </v-btn>
 
@@ -327,7 +311,7 @@
       <v-card-actions class="card-padding">
         <v-row>
           <v-col cols="6" lg="3" class="d-flex align-center">
-            <span class="text-body me-3 text-sm">Registros por página:</span>
+            <span class="text-body me-3 text-sm">Items per page:</span>
             <v-text-field
               hide-details
               type="number"
@@ -480,7 +464,7 @@ export default {
 
   computed: {
     formTitle() {
-      return this.editedIndex === -1 ? "Nuevo Registro" : "Editar Registro";
+      return this.editedIndex === -1 ? "New Item" : "Edit Item";
     },
     pages() {
       return this.pagination.rowsPerPage

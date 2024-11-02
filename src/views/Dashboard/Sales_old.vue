@@ -96,7 +96,7 @@
                         item.growth
                       }}</span>
                       <span class="font-weight-light ms-1"
-                        >desde el último mes</span
+                        >since last month</span
                       >
                     </p>
                   </v-col>
@@ -121,7 +121,7 @@
         <v-col md="4">
           <v-card class="card-shadow border-radius-xl px-4 py-4">
             <h6 class="mb-0 text-h6 text-typo font-weight-bold">
-              Cant. Llamas por Distrito
+              Sales by Country
             </h6>
             <v-card-text class="pt-3 pb-0 px-0">
               <v-list class="py-0">
@@ -131,12 +131,12 @@
                   class="pt-2 pb-1 px-1"
                   :class="{ 'border-bottom': index != countries.length - 1 }"
                 >
-                  <!-- <v-img
+                  <v-img
                     :alt="`${chat.title} avatar`"
                     :src="chat.avatar"
                     max-width="20px"
                     class="me-6"
-                  ></v-img> -->
+                  ></v-img>
 
                   <v-list-item-content>
                     <span class="text-xs font-weight-bold text-body">
@@ -327,17 +327,17 @@ export default {
     return {
       stats: [
         {
-          text: "Cant. Total de llamas",
+          text: "Sales",
           value: "$230,220",
           growth: "+55%",
         },
         {
-          text: "Cant. Total de Productores",
+          text: "Customers",
           value: "3.200",
           growth: "+12%",
         },
         {
-          text: "Cant. Crías Nacidas",
+          text: "Avg. Revenue",
           value: "$1.200",
           growth: "+$213",
         },

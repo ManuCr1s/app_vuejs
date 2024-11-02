@@ -1,7 +1,7 @@
 <template>
   <v-card class="card-shadow border-radius-xl px-4 py-4">
     <div class="d-flex justify-content-between">
-      <h6 class="mb-0 text-h6 text-typo font-weight-bold">Cant. Llamas por Mes</h6>
+      <h6 class="mb-0 text-h6 text-typo font-weight-bold">Revenue</h6>
       <v-tooltip left>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -28,19 +28,19 @@
             >
           </v-btn>
         </template>
-        <span>Datos actualizados al 01/11/2024</span>
+        <span>See which ads perform better</span>
       </v-tooltip>
     </div>
     <div class="d-flex">
       <div class="my-1">
-        <v-badge bottom bordered color="#a0f57b" dot offset-x="0" offset-y="9">
+        <v-badge bottom bordered color="#e91e63" dot offset-x="0" offset-y="9">
         </v-badge>
-        <span class="text-dark text-xs ms-4">K'ara</span>
+        <span class="text-dark text-xs ms-4">Facebook Ads</span>
       </div>
       <div class="my-1 ms-6">
-        <v-badge bottom bordered color="#17c1e8" dot offset-x="0" offset-y="9">
+        <v-badge bottom bordered color="#344767" dot offset-x="0" offset-y="9">
         </v-badge>
-        <span class="text-dark text-xs ms-4">Chaku</span>
+        <span class="text-dark text-xs ms-4">Google Ads</span>
       </div>
     </div>
     <div class="chart-area mt-4">
@@ -62,28 +62,28 @@ export default {
     new Chart(document.getElementById(this.revenueChartID).getContext("2d"), {
       type: "line",
       data: {
-        labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Set", "Oct", "Nov", "Dic"],
+        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         datasets: [
           {
-            label: "Raza K'ara",
+            label: "Facebook Ads",
             tension: 0,
             pointRadius: 5,
-            pointBackgroundColor: "#a0f57b",
+            pointBackgroundColor: "#e91e63",
             pointBorderColor: "transparent",
-            borderColor: "#a0f57b",
+            borderColor: "#e91e63",
             borderWidth: 4,
             backgroundColor: "transparent",
             fill: true,
-            data: [50, 100, 200, 190, 400, 350, 500, 450, 610, 700],
+            data: [50, 100, 200, 190, 400, 350, 500, 450, 700],
             maxBarThickness: 6,
           },
           {
-            label: "Raza Chaku",
+            label: "Google Ads",
             tension: 0,
             pointRadius: 5,
-            pointBackgroundColor: "#17c1e8",
+            pointBackgroundColor: "#3A416F",
             pointBorderColor: "transparent",
-            borderColor: "#17c1e8",
+            borderColor: "#3A416F",
             borderWidth: 4,
             backgroundColor: "transparent",
             fill: true,
@@ -154,5 +154,4 @@ export default {
     });
   },
 };
-
 </script>

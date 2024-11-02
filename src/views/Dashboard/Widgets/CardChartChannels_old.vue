@@ -1,7 +1,7 @@
 <template>
   <v-card class="card-shadow border-radius-xl px-4 py-4">
     <div class="d-flex justify-content-between">
-      <h6 class="mb-0 text-h6 text-typo font-weight-bold">Cant. Productores por Distrito</h6>
+      <h6 class="mb-0 text-h6 text-typo font-weight-bold">Channels</h6>
       <v-tooltip top>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -28,7 +28,7 @@
             >
           </v-btn>
         </template>
-        <span>Datos actualizados al 01/11/2024</span>
+        <span>See traffic channels</span>
       </v-tooltip>
     </div>
     <v-row class="mt-4 py-3">
@@ -78,7 +78,7 @@
           <v-badge
             bottom
             bordered
-            color="#a0f57b"
+            color="#7b809a"
             dot
             offset-x="4"
             offset-y="9"
@@ -89,18 +89,18 @@
       </v-col>
     </v-row>
     <div class="d-flex text-body mt-8">
-      <!-- <p class="text-sm font-weight-light mb-0 w-60">
+      <p class="text-sm font-weight-light mb-0 w-60">
         More than <span class="font-weight-bold">1,200,000</span> sales are made
         using referral marketing, and
         <span class="font-weight-bold">700,000</span> are from social media.
-      </p> -->
+      </p>
       <v-btn
         :elevation="0"
         color="#cb0c9f"
         class="font-weight-bold text-body bg-lighter py-5 px-6 my-auto ms-auto"
         small
       >
-        Ver más
+        Read more
       </v-btn>
     </div>
   </v-card>
@@ -128,7 +128,7 @@ export default {
             tension: 0.9,
             pointRadius: 2,
             borderWidth: 1,
-            backgroundColor: ["#17c1e8", "#e91e63", "#3A416F", "#a0f57b"],
+            backgroundColor: ["#17c1e8", "#e91e63", "#3A416F", "#a8b8d8"],
             data: [15, 20, 12, 60],
             fill: false,
           },

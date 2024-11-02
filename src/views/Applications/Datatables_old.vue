@@ -19,6 +19,7 @@ import DatatableSearch from "./Widgets/DatatableSearch.vue";
 export default {
   name: "datatables",
   components: {
+    DatatableSimple,
     DatatableSearch,
   },
 };
