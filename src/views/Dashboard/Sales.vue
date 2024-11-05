@@ -21,7 +21,7 @@
                         font-weight-bold
                       "
                     >
-                      {{ item.text }}
+                      {{ item.text }} 
                     </p>
                     <h5 class="text-h5 text-typo font-weight-bolder mb-0">
                       {{ item.value }}
@@ -315,13 +315,16 @@
 import CardChartChannels from "./Widgets/CardChartChannels.vue";
 import CardChartRevenue from "./Widgets/CardChartRevenue.vue";
 import CardChartSalesAge from "./Widgets/CardChartSalesAge.vue";
-
+import {mapState} from 'vuex';
 export default {
   name: "Sales",
   components: {
     CardChartChannels,
     CardChartRevenue,
     CardChartSalesAge,
+  },
+  computed:{
+      ...mapState(['auth'])
   },
   data() {
     return {

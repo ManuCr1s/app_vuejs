@@ -3,8 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import vuetify from "./plugins/vuetify";
 import DashboardPlugin from "./plugins/dashboard-plugin";
-
-Vue.config.productionTip = false;
+import store from './store/index';
 
 // Photoswipe Gallery
 import Photoswipe from "vue-pswipe";
@@ -14,6 +13,7 @@ Vue.use(Photoswipe);
 Vue.use(DashboardPlugin);
 
 new Vue({
+  store,
   router,
   vuetify,
   render: (h) => h(App),

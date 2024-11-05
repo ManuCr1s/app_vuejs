@@ -233,6 +233,28 @@
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
+            <div class="
+                pa-4
+                list-item-hover-active
+                d-flex
+                align-items-center
+                py-1
+                my-1
+                border-radius-md
+              " @click="logout">
+              <v-icon class="material-icons-round text-body" size="20">padlock</v-icon>
+                <v-list-item-content class="pa-0">
+                      <v-list-item-title class="text-body-2 ls-0 text-typo font-weight-600 mb-0">
+                          <v-row>
+                            <v-col>
+                              <h6 class="text-sm font-weight-normal ms-2 text-typo">
+                                  Cerrar Sesion
+                              </h6>
+                            </v-col>
+                          </v-row>
+                      </v-list-item-title>
+              </v-list-item-content>
+            </div>
           </v-list>
         </v-menu>
       </v-col>
@@ -240,6 +262,7 @@
   </v-app-bar>
 </template>
 <script>
+import { mapActions } from 'vuex';
 export default {
   name: "app-bar",
   props: {
@@ -273,6 +296,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions(['logout']),
     drawerClose() {
       this.togglerActive = !this.togglerActive;
       this.$emit("drawer-toggle", true);

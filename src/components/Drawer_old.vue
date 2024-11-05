@@ -32,7 +32,7 @@
             >
             </v-img>
             <span class="ms-2 font-weight-bold text-sm"
-              >LLAMA PASCOS</span
+              >Material Dashboard 2 PRO</span
             >
           </div>
         </v-list-item-title>
@@ -58,10 +58,11 @@
 
           <v-list-item-content>
             <v-list-item-title class="ms-2 ps-1 font-weight-light">
-                User 01
+              Brooklyn Alice
             </v-list-item-title>
           </v-list-item-content>
         </template>
+
         <v-list-item
           :ripple="false"
           link
@@ -104,7 +105,7 @@
                   </v-list-group>
                 </v-list>
               </template>
-              
+
               <v-list-item
                 v-for="child2 in child.items"
                 :ripple="false"
@@ -150,7 +151,70 @@
           </v-list-item-content>
         </template>
 
-    
+        <v-list-item
+          :ripple="false"
+          link
+          class="mb-1 no-default-hover px-0"
+          :class="child.items ? 'has-children' : ''"
+          v-for="child in item.items"
+          :key="child.title"
+          :to="child.link"
+        >
+          <div class="w-100 d-flex align-center pa-2 border-radius-lg">
+            <span class="v-list-item-mini" v-text="child.prefix"></span>
+
+            <v-list-item-content class="ms-6 ps-1" v-if="!child.items">
+              <v-list-item-title
+                v-text="child.title"
+                @click="listClose($event)"
+              ></v-list-item-title>
+            </v-list-item-content>
+
+            <v-list-item-content class="ms-6 ps-1 py-0" v-if="child.items">
+              <v-list-group
+                prepend-icon=""
+                :ripple="false"
+                sub-group
+                no-action
+                v-model="child.active"
+              >
+                <template v-slot:activator>
+                  <v-list nav dense class="pa-0">
+                    <v-list-group
+                      :ripple="false"
+                      append-icon="fas fa-angle-down me-auto ms-1"
+                      active-class="item-active"
+                      class="mb-0"
+                    >
+                      <template v-slot:activator class="mb-0">
+                        <v-list-item-content class="py-0">
+                          <v-list-item-title
+                            v-text="child.title"
+                          ></v-list-item-title>
+                        </v-list-item-content>
+                      </template>
+                    </v-list-group>
+                  </v-list>
+                </template>
+
+                <v-list-item
+                  v-for="child2 in child.items"
+                  :ripple="false"
+                  :key="child2.title"
+                  :to="child2.link"
+                  @click="listClose($event)"
+                >
+                  <span class="v-list-item-mini" v-text="child2.prefix"></span>
+                  <v-list-item-content>
+                    <v-list-item-title
+                      v-text="child2.title"
+                    ></v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list-group>
+            </v-list-item-content>
+          </div>
+        </v-list-item>
       </v-list-group>
 
       <h5
@@ -168,7 +232,7 @@
         "
         :class="sidebarTheme == 'dark' ? 'text-white' : 'text-default'"
       >
-        ADMINISTRACION
+        Pages
       </h5>
 
       <v-list-group
@@ -293,7 +357,7 @@
         "
         :class="sidebarTheme == 'dark' ? 'text-white' : 'text-default'"
       >
-        PANEL
+        Docs
       </h5>
       <v-list-item-group>
         <div v-for="(item, i) in itemsDocs" :key="i">
@@ -377,47 +441,35 @@ export default {
     ],
     userInfo: [
       {
-        title: "Mi Perfil",
+        title: "My Profile",
         prefix: "MP",
       },
       {
-        title: "Ajustes",
-        prefix: "A",
+        title: "Settings",
+        prefix: "S",
       },
       {
-        title: "Cerrar",
-        prefix: "C",
+        title: "Logout",
+        prefix: "L",
       },
     ],
     itemsDocs: [
       {
         action: "upcoming",
-        link: "/productor",
-        title: "Productores",
+        link: "/getting-started",
+        title: "Getting Started",
         external: false,
       },
       {
         action: "view_in_ar",
-        link: "/productor",
-        title: "Llamas",
+        link: "https://vuetifyjs.com/en/components/alerts/",
+        title: "Components",
         external: true,
       },
       {
         action: "receipt_long",
-        link: "#",
-        title: "Reportes",
-        external: true,
-      },
-      {
-        action: "receipt_long",
-        link: "#",
-        title: "Pedigri",
-        external: true,
-      },
-      {
-        action: "receipt_long",
-        link: "#",
-        title: "Valores Geneticos",
+        link: "https://github.com/creativetimofficial/ct-vuetify-soft-ui-dashboard-pro/blob/main/CHANGELOG.md",
+        title: "Changelog",
         external: true,
       },
     ],
@@ -426,44 +478,239 @@ export default {
         action: "dashboard",
         active: true,
         title: "Dashboards",
-        link:'/dashboard'
+        items: [
+          {
+            title: "Analytics",
+            prefix: "A",
+            link: "/pages/dashboards/analytics",
+          },
+          {
+            title: "Discover",
+            prefix: "D",
+            link: "/pages/dashboards/discover",
+          },
+          {
+            title: "Sales",
+            prefix: "S",
+            link: "/pages/dashboards/sales",
+          },
+          {
+            title: "Automotive",
+            prefix: "A",
+            link: "/pages/dashboards/automotive",
+          },
+          {
+            title: "Smart Home",
+            prefix: "S",
+            link: "/pages/dashboards/smart-home",
+          },
+        ],
       },
     ],
     itemsPages: [
       {
         action: "image",
         active: false,
-        title: "Roles",
+        title: "Pages",
         items: [
           {
-            title:"Roles",
-            prefix: "R",
-            link: "#",
+            title: "Profile",
+            prefix: "P",
             active: false,
-          }
+            items: [
+              {
+                title: "Profile Overview",
+                prefix: "P",
+                link: "/pages/pages/profile/overview",
+              },
+              {
+                title: "All Projects",
+                prefix: "A",
+                link: "/pages/pages/profile/projects",
+              },
+              {
+                title: "Messages",
+                prefix: "M",
+                link: "/pages/pages/profile/messages",
+              },
+            ],
+          },
+          {
+            title: "Users",
+            prefix: "U",
+            active: false,
+            items: [
+              {
+                title: "Reports",
+                prefix: "R",
+                link: "/pages/pages/users/reports",
+              },
+              {
+                title: "New User",
+                prefix: "N",
+                link: "/pages/pages/users/new-user",
+              },
+            ],
+          },
+          {
+            title: "Account",
+            prefix: "A",
+            active: false,
+            items: [
+              {
+                title: "Settings",
+                prefix: "S",
+                link: "/pages/pages/account/settings",
+              },
+              {
+                title: "Billing",
+                prefix: "B",
+                link: "/pages/pages/account/billing",
+              },
+              {
+                title: "Invoice",
+                prefix: "I",
+                link: "/pages/pages/account/invoice",
+              },
+            ],
+          },
+          {
+            title: "Projects",
+            prefix: "P",
+            active: false,
+            items: [
+              {
+                title: "Timeline",
+                prefix: "T",
+                link: "/pages/pages/projects/timeline",
+              },
+            ],
+          },
+          {
+            title: "Virtual Reality",
+            prefix: "V",
+            active: false,
+            items: [
+              {
+                title: "VR Default",
+                prefix: "V",
+                link: "/pages/dashboards/vr/vr-default",
+              },
+              {
+                title: "VR Info",
+                prefix: "V",
+                link: "/pages/dashboards/vr/vr-info",
+              },
+            ],
+          },
+          {
+            title: "Pricing Page",
+            prefix: "P",
+            link: "/pages/pages/pricing-page",
+          },
+          { title: "RTL", prefix: "R", link: "/pages/pages/rtl" },
+          { title: "Charts", prefix: "C", link: "/pages/pages/charts" },
+          { title: "Alerts", prefix: "A", link: "/pages/pages/alerts" },
+          {
+            title: "Notifications",
+            prefix: "N",
+            link: "/pages/pages/notifications",
+          },
         ],
       },
       {
         action: "apps",
         active: false,
-        title: "Ubicacion",
+        title: "Applications",
         items: [
-          { title: "Centros Poblados", prefix: "CP", link: "#" },
-          { title: "Anexos", prefix: "A", link: "#" },
+          { title: "CRM", prefix: "C", link: "/pages/dashboards/crm" },
+          { title: "Kanban", prefix: "K", link: "/pages/applications/kanban" },
+          { title: "Wizard", prefix: "W", link: "/pages/applications/wizard" },
+          {
+            title: "DataTables",
+            prefix: "D",
+            link: "/pages/applications/datatables",
+          },
+          {
+            title: "Calendar",
+            prefix: "C",
+            link: "/pages/applications/calendar",
+          },
         ],
       },
       {
         action: "shopping_basket",
         active: false,
-        title: "Usuarios",
+        title: "Ecommerce",
         items: [
           {
-            title: "Usuarios",
+            title: "Products",
             prefix: "P",
             active: false,
-            link:'#'
+            items: [
+              {
+                title: "New Product",
+                prefix: "N",
+                link: "/pages/ecommerce/products/new-product",
+              },
+              {
+                title: "Edit Product",
+                prefix: "E",
+                link: "/pages/ecommerce/products/edit-product",
+              },
+              {
+                title: "Product Page",
+                prefix: "P",
+                link: "/pages/ecommerce/products/product-page",
+              },
+            ],
           },
-
+          {
+            title: "Orders",
+            prefix: "O",
+            active: false,
+            items: [
+              {
+                title: "Order List",
+                prefix: "O",
+                link: "/pages/ecommerce/orders/list",
+              },
+              {
+                title: "Order Details",
+                prefix: "O",
+                link: "/pages/ecommerce/orders/details",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        action: "content_paste",
+        active: false,
+        title: "Authentication",
+        items: [
+          {
+            title: "Sign Up",
+            prefix: "S",
+            active: false,
+            items: [
+              {
+                title: "Basic",
+                prefix: "B",
+                link: "/pages/authentication/signup/basic",
+              },
+              {
+                title: "Cover",
+                prefix: "C",
+                link: "/pages/authentication/signup/cover",
+              },
+              {
+                title: "Illustration",
+                prefix: "I",
+                link: "/pages/authentication/signup/illustration",
+              },
+            ],
+          },
         ],
       },
     ],
