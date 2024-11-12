@@ -4,7 +4,10 @@ import DashboardLayout from "../views/Layout/DashboardLayout.vue";
 import AuthBasicLayout from "../views/Layout/AuthBasicLayout";
 const Sales = () => import("../views/Dashboard/Sales.vue");
 const Automotive = () => import("../views/Dashboard/Automotive.vue");
-const Datatables = () => import( "@/views/Applications/Datatables.vue");
+const Productor = () => import( "@/views/Applications/Datatables.vue");
+const Roles = () => import( "@/views/Applications/Datatables.vue");
+const Llama = () => import( "@/views/Applications/Datatables.vue");
+const User = () => import( "@/views/Applications/Datatables.vue");
 const AuthLogin  = () => import( "@/views/Pages/Authentication/SignUp/Basic.vue");
 Vue.use(VueRouter);
 let loginPage = {
@@ -54,9 +57,36 @@ const routes = [
       },
     },
     {
-      path: "/list",
+      path: "/roles",
       name: "Datatables",
-      component: Datatables,
+      component: Roles,
+      meta: {
+        requiresAuth:true,
+        groupName: "Applications",
+      },
+    },
+    {
+      path: "/productores",
+      name: "Datatables",
+      component: Productor,
+      meta: {
+        requiresAuth:true,
+        groupName: "Applications",
+      },
+    },
+    {
+      path: "/llamas",
+      name: "Datatables",
+      component: Llama,
+      meta: {
+        requiresAuth:true,
+        groupName: "Applications",
+      },
+    },
+    {
+      path: "/usuarios",
+      name: "Datatables",
+      component: User,
       meta: {
         requiresAuth:true,
         groupName: "Applications",
@@ -67,6 +97,7 @@ const routes = [
 loginPage,
 ];
 const router = new VueRouter({
+    mode: 'history',
     routes,
   });
 router.beforeEach((to,from,next)=>{

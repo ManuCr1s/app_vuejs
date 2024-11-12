@@ -89,81 +89,10 @@
       <v-col
         cols="12"
         sm="6"
-        class="d-flex align-center"
+        class="d-flex align-center justify-end"
         :class="$vuetify.rtl ? 'text-sm-left' : 'text-sm-right'"
       >
-        <v-form
-          v-if="hasBg"
-          @submit.prevent="submit"
-          class="navbar-search navbar-search-light d-inline-block ms-auto"
-          id="navbar-search-main"
-        >
-          <v-text-field
-            rounded-sm
-            background-color="transparent"
-            color="#e91e63"
-            dense
-            hide-details
-            outlined
-            label="Search here"
-            class="input-style font-size-input me-md-3"
-          >
-          </v-text-field>
-        </v-form>
 
-        <v-btn
-          icon
-          :ripple="false"
-          :class="{ 'btn-dark-hover': !hasBg, 'btn-hover': hasBg }"
-          class="text-body"
-          :color="linkColor"
-          small
-          @click="$emit('toggleSettingsDrawer', true)"
-        >
-          <v-icon class="material-icons-round me-sm-1" size="20">
-            account_circle
-          </v-icon>
-        </v-btn>
-
-        <v-btn
-          elevation="0"
-          :ripple="false"
-          height="43"
-          class="
-            font-weight-600
-            text-capitalize
-            drawer-toggler
-            py-3
-            px-0
-            rounded-sm
-          "
-          :class="{
-            'btn-dark-toggler-hover': !hasBg,
-            'btn-toggler-hover': hasBg,
-            active: togglerActive,
-          }"
-          v-if="$vuetify.breakpoint.mobile"
-          color="transparent"
-          @click="drawerClose"
-        >
-          <div class="drawer-toggler-inner">
-            <i class="drawer-toggler-line text-body"></i>
-            <i class="drawer-toggler-line text-body"></i>
-            <i class="drawer-toggler-line text-body"></i>
-          </div>
-        </v-btn>
-
-        <v-btn
-          icon
-          :ripple="false"
-          :class="{ 'btn-dark-hover': !hasBg, 'btn-hover': hasBg }"
-          class="text-body px-5"
-          :color="linkColor"
-          small
-          @click="$emit('toggleSettingsDrawer', true)"
-        >
-          <v-icon class="material-icons-round" size="20"> settings </v-icon>
-        </v-btn>
 
         <v-menu
           transition="slide-y-transition"
@@ -184,11 +113,11 @@
               small
             >
               <v-icon class="material-icons-round" size="20">
-                notifications
+                account_circle
               </v-icon>
               <v-badge
                 color="#f44335"
-                content="11"
+                content="0"
                 offset-x="1"
                 offset-y="0"
                 class="position-absolute"
@@ -280,18 +209,6 @@ export default {
       drawer: false,
       togglerActive: false,
       dropdown: [
-        {
-          icon: "email",
-          title: "Check new messages",
-        },
-        {
-          icon: "podcasts",
-          title: "Manage podcast session",
-        },
-        {
-          icon: "shopping_cart",
-          title: "Payment successfully completed",
-        },
       ],
     };
   },

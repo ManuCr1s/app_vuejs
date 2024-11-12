@@ -130,26 +130,40 @@
 
     <v-list nav dense>
       <v-list-group
-        :ripple="false"
-        v-for="item in items"
-        :key="item.title"
-        v-model="item.active"
         append-icon="fas fa-angle-down"
         class="pb-1 mx-2"
         active-class="item-active"
       >
         <template v-slot:activator>
           <v-list-item-icon class="me-2 align-center">
-            <i class="material-icons-round opacity-10">{{ item.action }}</i>
+            <i class="material-icons-round opacity-10">dashboard</i>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title
-              v-text="item.title"
+              v-text="'Inicio'"
               class="ms-1"
             ></v-list-item-title>
           </v-list-item-content>
         </template>
-
+        <v-list-item
+                
+                :to="'/dashboard'"
+                @click="listClose($event)"
+                class="px-0"
+              >
+                <v-list-item-content>
+                  <div class="d-flex align-items-center pa-2">
+                    <span
+                      class="v-list-item-mini"
+                      v-text="'P'"
+                    ></span>
+                    <v-list-item-title
+                      v-text="'Principal'"
+                      class="ms-6"
+                    ></v-list-item-title>
+                  </div>
+                </v-list-item-content>
+              </v-list-item>
     
       </v-list-group>
 
@@ -392,33 +406,33 @@ export default {
     itemsDocs: [
       {
         action: "upcoming",
-        link: "/productor",
+        link: "/productores",
         title: "Productores",
         external: false,
       },
       {
         action: "view_in_ar",
-        link: "/productor",
+        link: "/llamas",
         title: "Llamas",
-        external: true,
+        external: false,
       },
       {
         action: "receipt_long",
-        link: "#",
+        link: "/reportes",
         title: "Reportes",
-        external: true,
+        external: false,
       },
       {
         action: "receipt_long",
-        link: "#",
+        link: "/pedigris",
         title: "Pedigri",
         external: true,
       },
       {
         action: "receipt_long",
-        link: "#",
+        link: "/valores",
         title: "Valores Geneticos",
-        external: true,
+        external: false,
       },
     ],
     items: [
@@ -438,7 +452,7 @@ export default {
           {
             title:"Roles",
             prefix: "R",
-            link: "#",
+            link: "/roles",
             active: false,
           }
         ],
@@ -448,8 +462,8 @@ export default {
         active: false,
         title: "Ubicacion",
         items: [
-          { title: "Centros Poblados", prefix: "CP", link: "#" },
-          { title: "Anexos", prefix: "A", link: "#" },
+          { title: "Centros Poblados", prefix: "CP", link: "/centros" },
+          { title: "Anexos", prefix: "A", link: "/anexos" },
         ],
       },
       {
@@ -461,7 +475,7 @@ export default {
             title: "Usuarios",
             prefix: "P",
             active: false,
-            link:'#'
+            link:'/usuarios'
           },
 
         ],
