@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div class="fixed-plugin" :class="showSettingsDrawer == true ? 'show' : ''">
     <v-card class="shadow-lg">
       <div class="card-padding mb-16">
@@ -303,4 +303,4 @@ export default {
     },
   },
 };
-</script> -->
+</script>

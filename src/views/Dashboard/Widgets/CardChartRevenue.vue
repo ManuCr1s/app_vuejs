@@ -28,7 +28,8 @@
             >
           </v-btn>
         </template>
-        <span>Datos actualizados al 01/11/2024</span>
+        <span>Datos actualizados al {{ new Date().toLocaleDateString('es-ES') }}
+        </span>
       </v-tooltip>
     </div>
     <div class="d-flex">

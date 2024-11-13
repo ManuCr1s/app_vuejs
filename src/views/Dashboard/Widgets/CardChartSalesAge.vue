@@ -20,15 +20,15 @@ export default {
     new Chart(document.getElementById(this.salesAgeChartID).getContext("2d"), {
       type: "bar",
       data: {
-        labels: ["16-20", "21-25", "26-30", "31-36", "36-42", "42-50", "50+"],
+        labels: ["10-20", "21-25", "26-30", "31-36", "36-42", "42-50", "50+"],
         datasets: [
           {
-            label: "Sales by age",
+            label: "Población por distrito",
             weight: 5,
             borderWidth: 0,
             borderRadius: 4,
             backgroundColor: "#17c1e8",
-            data: [15, 20, 12, 60, 20, 15, 25],
+            data: [1000, 1500, 2000, 3000, 4000, 5000, 6000, 7000, 8000],
             fill: false,
           },
         ],

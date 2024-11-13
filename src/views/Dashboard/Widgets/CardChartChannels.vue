@@ -28,7 +28,8 @@
             >
           </v-btn>
         </template>
-        <span>Datos actualizados al 01/11/2024</span>
+        <span>Datos actualizados al {{ new Date().toLocaleDateString('es-ES') }}
+        </span>
       </v-tooltip>
     </div>
     <v-row class="mt-4 py-3">

@@ -6,8 +6,7 @@
           Llamas
         </h5>
         <p class="text-sm text-body font-weight-light mb-0">
-          Features include sorting, searching, pagination, content-editing, and
-          row selection.
+          Explora la lista de llamas con facilidad para buscar y filtrar datos.
         </p>
       </div>
 
@@ -394,7 +393,7 @@ export default {
       },
       headers: [
         {
-          text: "Name",
+          text: "Nombre",
           align: "start",
           cellClass: "border-bottom",
           sortable: false,
@@ -408,12 +407,12 @@ export default {
           class: "text-secondary font-weight-bolder opacity-7",
         },
         {
-          text: "Age",
+          text: "Edad",
           value: "age",
           class: "text-secondary font-weight-bolder opacity-7",
         },
         {
-          text: "Salary",
+          text: "Estado",
           value: "salary",
           class: "text-secondary font-weight-bolder opacity-7",
         },

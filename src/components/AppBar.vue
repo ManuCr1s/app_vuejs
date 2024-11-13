@@ -177,7 +177,7 @@
                           <v-row>
                             <v-col>
                               <h6 class="text-sm font-weight-normal ms-2 text-typo">
-                                  Cerrar Sesion
+                                  Cerrar Sesión
                               </h6>
                             </v-col>
                           </v-row>

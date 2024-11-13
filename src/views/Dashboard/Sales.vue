@@ -27,14 +27,14 @@
                       {{ item.value }}
                     </h5>
                   </v-col>
-                  <v-col sm="8" class="text-end">
+                  <!-- <v-col sm="8" class="text-end">
                     <v-menu
                       transition="slide-x-transition"
                       offset-y
                       offset-x
                       min-width="150"
-                    >
-                      <template v-slot:activator="{ on, attrs }">
+                    > -->
+                      <!-- <template v-slot:activator="{ on, attrs }">
                         <v-btn
                           text
                           :ripple="false"
@@ -48,9 +48,9 @@
                             >6 May - 7 May</span
                           >
                         </v-btn>
-                      </template>
+                      </template> -->
 
-                      <v-list class="pa-2">
+                      <!-- <v-list class="pa-2">
                         <v-list-item
                           class="list-item-hover-active border-radius-md"
                         >
@@ -85,9 +85,9 @@
                           </v-list-item-content>
                         </v-list-item>
                         <hr class="horizontal dark" />
-                      </v-list>
-                    </v-menu>
-                  </v-col>
+                      </v-list> -->
+                    <!-- </v-menu>
+                  </v-col> -->
                 </v-row>
                 <v-row class="px-4 mt-1">
                   <v-col cols="12" class="pt-0">
@@ -173,7 +173,7 @@
           </v-card>
         </v-col>
       </v-row>
-      <v-row>
+      <!-- <v-row>
         <v-col cols="12">
           <v-card class="card-shadow border-radius-xl py-4">
             <h6 class="mb-0 text-h6 text-typo font-weight-bold px-4">
@@ -306,7 +306,7 @@
             </v-card-text>
           </v-card>
         </v-col>
-      </v-row>
+      </v-row> -->
     </v-container>
   </div>
 </template>

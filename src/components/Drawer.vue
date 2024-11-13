@@ -32,7 +32,7 @@
             >
             </v-img>
             <span class="ms-2 font-weight-bold text-sm"
-              >LLAMA PASCOS</span
+              >LLAMAPASCO</span
             >
           </div>
         </v-list-item-title>
@@ -182,7 +182,7 @@
         "
         :class="sidebarTheme == 'dark' ? 'text-white' : 'text-default'"
       >
-        ADMINISTRACION
+        ADMIN
       </h5>
 
       <v-list-group
