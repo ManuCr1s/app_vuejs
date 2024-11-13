@@ -287,7 +287,7 @@
               color="#67748e"
             >
               <v-icon size="14" class="material-icons-round"
-                >remove_red_eye</v-icon
+                >visibility</v-icon
               >
             </v-btn>
 

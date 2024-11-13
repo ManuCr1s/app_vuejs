@@ -33,6 +33,7 @@ const routes = [
   {
     path: "/",
     name: "Dashboard",
+    redirect: "/dashboard",
     component: DashboardLayout,
     meta: {
       requiresAuth:true,

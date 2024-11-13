@@ -3,7 +3,7 @@
     <v-container fluid class="px-6 py-6">
       <v-row class="mt-6 mb-5">
         <v-col lg="7">
-          <v-card class="card-shadow bg-gradient-default border-radius-xl">
+          <v-card class="card-shadow bg-gradient-default border-radius-xl" >
             <!-- style="background: linear-gradient(to bottom, #6be18f, #09d23e);" -->
             <!-- <v-img
               src="@/assets/img/shapes/waves-white.svg"
@@ -14,19 +14,20 @@
               <v-row class="position-relative">
                 <v-col cols="12" class="mt-lg-n16 px-0">
                   <v-img
-                    src="@/assets/img/tesla-model-s.png"
+                    src="@/assets/img/ivana-square.jpg"
                     class="
-                      w-75
+                      w-50
                       mt-n7 mt-lg-n16
                       d-none d-md-block
                       mx-auto
                       z-index-1
+                      rounded-circle
                     "
                   ></v-img>
                 </v-col>
                 <v-col lg="6" class="text-center">
                   <h4 class="text-h4 text-white font-weight-bold opacity-9">
-                    Nombre y apellido
+                    Nombres
                   </h4>
                   <hr class="horizontal light mt-1 mb-4" />
                   <div class="d-flex justify-content-center">
@@ -40,14 +41,14 @@
                           opacity-8
                         "
                       >
-                        Distance
+                        Cantidad de llamas
                       </h6>
                       <h3 class="text-white text-h3 font-weight-bold">
-                        145 <small class="text-sm">Km</small>
+                        84
                       </h3>
                     </div>
                     <div class="ms-lg-16 me-auto">
-                      <h6
+                      <!-- <h6
                         class="
                           mb-0
                           text-h6
@@ -60,38 +61,47 @@
                       </h6>
                       <h3 class="text-white text-h3 font-weight-bold">
                         300 <small class="text-sm">Kw</small>
-                      </h3>
+                      </h3> -->
                     </div>
                   </div>
                 </v-col>
                 <v-col lg="6" class="text-center">
                   <h4 class="text-h4 text-white font-weight-bold opacity-9">
-                    Nombre de fundo
+                    Apellidos
                   </h4>
                   <hr class="horizontal light mt-1 mb-4" />
-                  <div class="d-flex">
+                  <div class="d-flex justify-content-center">
                     <div class="ms-auto">
-                      <h6 class="text-h6 font-weight-bold mb-0 text-white">
-                        Miclan, DW
-                      </h6>
-                      <h6 class="text-h6 font-weight-bold mb-0 text-white">
-                        891 Limarenda road
-                      </h6>
-                    </div>
-                    <!-- <div class="ms-16 me-auto">
-                      <v-btn
-                        icon
-                        outlined
-                        rounded
-                        color="#fff"
-                        width="36px"
-                        height="36px"
+                      <h6
+                        class="
+                          mb-0
+                          text-h6
+                          font-weight-normal
+                          text-white
+                          opacity-8
+                        "
                       >
-                        <v-icon size="16" class="material-icons-round"
-                          >map</v-icon
-                        >
-                      </v-btn>
-                    </div> -->
+                      </h6>
+                      <h4 class="text-white text-h4 font-weight-bold">
+                        Nombre de fundo
+                      </h4>
+                    </div>
+                    <div class="ms-lg-16 me-auto">
+                      <!-- <h6
+                        class="
+                          mb-0
+                          text-h6
+                          font-weight-normal
+                          text-white
+                          opacity-8
+                        "
+                      >
+                        Average Energy
+                      </h6>
+                      <h3 class="text-white text-h3 font-weight-bold">
+                        300 <small class="text-sm">Kw</small>
+                      </h3> -->
+                    </div>
                   </div>
                 </v-col>
               </v-row>
@@ -101,7 +111,7 @@
         <v-col lg="5" cols="12">
           <v-row>
             <v-col cols="12">
-              <v-card class="bg-gradient-default border-radius-xl mb-3">
+              <v-card class="bg-gradient-success border-radius-xl mb-3">
                 <div class="px-4 py-4">
                   <v-row class="row">
                     <v-col cols="8" class="my-auto">
@@ -115,14 +125,14 @@
                             opacity-7
                           "
                         >
-                          Wheather today
+                          DNI
                         </p>
                         <h5 class="text-white text-h5 font-weight-bolder mb-0">
-                          San Francisco - 29°C
+                          12345678
                         </h5>
                       </div>
                     </v-col>
-                    <v-col cols="4" class="text-end">
+                    <!-- <v-col cols="4" class="text-end">
                       <v-img
                         src="@/assets/img/small-logos/icon-sun-cloud.png"
                         class="w-50 ms-auto"
@@ -130,7 +140,7 @@
                       <h5 class="mb-0 text-white text-h5 text-end me-1">
                         Cloudy
                       </h5>
-                    </v-col>
+                    </v-col> -->
                   </v-row>
                 </div>
               </v-card>
@@ -144,13 +154,13 @@
                 <v-row no-gutters>
                   <v-col sm="4" class="text-start">
                     <v-avatar
-                      color="bg-gradient-default"
+                      color="bg-gradient-success"
                       class="shadow border-radius-xl mt-n8"
                       height="64"
                       width="64"
                     >
                       <v-icon size="24" class="text-white material-icons-round">
-                        drive_eta
+                        hdr_weak
                       </v-icon>
                     </v-avatar>
                   </v-col>
@@ -159,7 +169,7 @@
                       Llamas K'ara
                     </p>
                     <h4 class="text-h4 text-dark font-weight-bolder mb-0">
-                      145 Km
+                      45
                     </h4>
                   </v-col>
                 </v-row>
@@ -170,13 +180,13 @@
                 <v-row no-gutters>
                   <v-col sm="4" class="text-start">
                     <v-avatar
-                      color="bg-gradient-default"
+                      color="bg-gradient-success"
                       class="shadow border-radius-xl mt-n8"
                       height="64"
                       width="64"
                     >
                       <v-icon size="24" class="text-white material-icons-round">
-                        battery_full
+                        hdr_strong
                       </v-icon>
                     </v-avatar>
                   </v-col>
@@ -185,7 +195,7 @@
                       Llamas Chaku
                     </p>
                     <h4 class="text-h4 text-dark font-weight-bolder mb-0">
-                      99 %
+                      39
                     </h4>
                   </v-col>
                 </v-row>
@@ -200,13 +210,13 @@
                 <v-row no-gutters>
                   <v-col sm="4" class="text-start">
                     <v-avatar
-                      color="bg-gradient-default"
+                      color="bg-gradient-success"
                       class="shadow border-radius-xl mt-n8"
                       height="64"
                       width="64"
                     >
                       <v-icon size="24" class="text-white material-icons-round">
-                        speed
+                        data_usage
                       </v-icon>
                     </v-avatar>
                   </v-col>
@@ -215,7 +225,7 @@
                       Llamas Macho
                     </p>
                     <h4 class="text-h4 text-dark font-weight-bolder mb-0">
-                      56 Km/h
+                      36
                     </h4>
                   </v-col>
                 </v-row>
@@ -226,13 +236,13 @@
                 <v-row no-gutters>
                   <v-col sm="4" class="text-start">
                     <v-avatar
-                      color="bg-gradient-default"
+                      color="bg-gradient-success"
                       class="shadow border-radius-xl mt-n8"
                       height="64"
                       width="64"
                     >
                       <v-icon size="24" class="text-white material-icons-round">
-                        volume_up
+                        donut_large
                       </v-icon>
                     </v-avatar>
                   </v-col>
@@ -241,7 +251,7 @@
                       Llamas Hembra
                     </p>
                     <h4 class="text-h4 text-dark font-weight-bolder mb-0">
-                      15/100
+                      48
                     </h4>
                   </v-col>
                 </v-row>
@@ -253,7 +263,7 @@
 
       <v-row>
         <v-col>
-          <v-card class="bg-gradient-default border-radius-xl">
+          <v-card class="bg-gradient-success border-radius-xl">
             <div class="px-6 py-6">
               <!-- <v-row>
                 <v-col lg="4" md="6"> -->
@@ -347,36 +357,35 @@
               <v-row>
                 <v-col lg="4" md="6">
                   <div class="d-flex align-center position-relative">
-                    <h3 class="text-h3 font-weight-bolder text-white mb-1">
+                    <p class="text-white opacity-8 mb-1 ms-8">
                       Provincia
-                    </h3>
-                    <p class="text-white opacity-8 mb-1 ms-3">
-                      Estimated arrival time
                     </p>
+                    <h3 class="text-h3 font-weight-bolder text-white mb-1 ms-3">
+                      PASCO
+                    </h3>
                     <hr class="vertical d-md-block d-none light mt-0 mb-4" />
                   </div>
                 </v-col>
                 <v-col lg="4" md="6">
                   <div class="d-flex align-center position-relative">
-                    <h3
-                      class="text-h3 font-weight-bolder text-white mb-1 ms-auto">
-                      Distrito
-                    </h3>
-                    <p class="text-white opacity-8 mb-1 ms-3 me-auto">
-                      Turn right in 2.4 miles
+                    <p class="text-white opacity-8 mb-1 ms-5">
+                      Región
                     </p>
+                    <h3 class="text-h3 font-weight-bolder text-white mb-1 ms-3">
+                      PASCO
+                    </h3>
+                    <hr class="vertical d-md-block d-none light mt-0 mb-4" />
                     <hr class="vertical d-md-block d-none light mt-0" />
                   </div>
                 </v-col>
                 <v-col lg="4" md="6">
                   <div class="d-flex align-center position-relative">
-                    <h3
-                      class="text-h3 font-weight-bolder text-white mb-1 ms-auto">
-                      Centro Poblado
-                    </h3>
-                    <p class="text-white opacity-8 mb-1 ms-3 me-auto">
-                      Distance to Creative Tim
+                    <p class="text-white opacity-8 mb-1 ms-5">
+                      Distrito
                     </p>
+                    <h3 class="text-h3 font-weight-bolder text-white mb-1 ms-3">
+                      CHAUPIMARCA
+                    </h3>
                   </div>
                 </v-col>
               </v-row>
