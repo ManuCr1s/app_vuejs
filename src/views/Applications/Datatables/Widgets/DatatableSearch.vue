@@ -3,7 +3,7 @@
     <v-card class="card-shadow border-radius-xl">
       <div class="card-header-padding">
         <h5 class="font-weight-bold text-h5 text-typo mb-0">
-          Llamas
+          {{currentRoute}}
         </h5>
         <p class="text-sm text-body font-weight-light mb-0">
           Features include sorting, searching, pagination, content-editing, and
@@ -369,7 +369,13 @@
 import users from "./Users";
 
 export default {
-  name: "paginated-tables",
+  name: "paginated-tables", 
+  props: {
+    currentRoute: {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {
       page: 1,

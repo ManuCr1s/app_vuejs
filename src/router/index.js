@@ -4,12 +4,12 @@ import DashboardLayout from "../views/Layout/DashboardLayout.vue";
 import AuthBasicLayout from "../views/Layout/AuthBasicLayout";
 const Sales = () => import("../views/Dashboard/Sales.vue");
 const Automotive = () => import("../views/Dashboard/Automotive.vue");
-const Productor = () => import( "@/views/Applications/Datatables.vue");
-const Roles = () => import( "@/views/Applications/Datatables.vue");
-const Llama = () => import( "@/views/Applications/Datatables.vue");
-const Usuario = () => import( "@/views/Applications/Datatables.vue");
-const Centro = () => import( "@/views/Applications/Datatables.vue");
-const Anexo = () => import( "@/views/Applications/Datatables.vue");
+const Productor = () => import( "@/views/Applications/Datatables/Datatables.vue");
+const Roles = () => import( "@/views/Applications/Datatables/Datatables.vue");
+const Llama = () => import( "@/views/Applications/Datatables/Datatables.vue");
+const Usuario = () => import( "@/views/Applications/Datatables/Datatables.vue");
+const Centro = () => import( "@/views/Applications/Datatables/Datatables.vue");
+const Anexo = () => import( "@/views/Applications/Datatables/Datatables.vue");
 const AuthLogin  = () => import( "@/views/Pages/Authentication/SignUp/Basic.vue");
 Vue.use(VueRouter);
 let loginPage = {
@@ -60,7 +60,7 @@ const routes = [
     },
     {
       path: "/roles",
-      name: "Datatables",
+      name: "Roles",
       component: Roles,
       meta: {
         requiresAuth:true,
