@@ -1,7 +1,7 @@
 <template>
   <v-card class="card-shadow border-radius-xl px-4 py-4">
     <div class="d-flex justify-content-between">
-      <h6 class="mb-0 text-h6 text-typo font-weight-bold">Cant. Productores por Distrito</h6>
+      <h6 class="mb-0 text-h6 text-typo font-weight-bold">Cant. Productores por Provincia</h6>
       <v-tooltip top>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -43,27 +43,27 @@
           <v-badge
             bottom
             bordered
-            color="#1a73e8"
+            color="#f9f871"
             dot
             offset-x="4"
             offset-y="9"
           >
           </v-badge>
-          <span class="text-dark text-xs ms-3">Facebook</span>
+          <span class="text-dark text-xs ms-3">Pasco</span>
         </div>
         <div class="my-2">
           <v-badge
             bottom
             bordered
-            color="#e91e63"
+            color="#a0c4ff"
             dot
             offset-x="4"
             offset-y="9"
           >
           </v-badge>
-          <span class="text-dark text-xs ms-3">Direct</span>
+          <span class="text-dark text-xs ms-3">Daniel A Carrión</span>
         </div>
-        <div class="my-2">
+        <!-- <div class="my-2">
           <v-badge
             bottom
             bordered
@@ -74,8 +74,8 @@
           >
           </v-badge>
           <span class="text-dark text-xs ms-3">Organic</span>
-        </div>
-        <div class="my-2">
+        </div> -->
+        <!-- <div class="my-2">
           <v-badge
             bottom
             bordered
@@ -86,7 +86,7 @@
           >
           </v-badge>
           <span class="text-dark text-xs ms-3">Referral</span>
-        </div>
+        </div> -->
       </v-col>
     </v-row>
     <div class="d-flex text-body mt-8">
@@ -120,7 +120,7 @@ export default {
     new Chart(document.getElementById(this.channelsChartID).getContext("2d"), {
       type: "pie",
       data: {
-        labels: ["Facebook", "Direct", "Organic", "Referral"],
+        labels: ["Daniel A. Carrión", "Pasco"],
         datasets: [
           {
             label: "Projects",
@@ -129,8 +129,8 @@ export default {
             tension: 0.9,
             pointRadius: 2,
             borderWidth: 1,
-            backgroundColor: ["#17c1e8", "#e91e63", "#3A416F", "#a0f57b"],
-            data: [15, 20, 12, 60],
+            backgroundColor: ["#a0c4ff","#f9f871"],
+            data: [15, 20],
             fill: false,
           },
         ],

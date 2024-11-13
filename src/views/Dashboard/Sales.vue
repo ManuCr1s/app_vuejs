@@ -140,7 +140,7 @@
 
                   <v-list-item-content>
                     <span class="text-xs font-weight-bold text-body">
-                      Country:
+                      Distrito:
                     </span>
                     <v-list-item-title
                       v-text="chat.country"
@@ -150,7 +150,7 @@
 
                   <v-list-item-content class="text-center">
                     <span class="text-xs font-weight-bold text-body">
-                      Sales:
+                      Raza K'ara:
                     </span>
                     <v-list-item-title
                       v-text="chat.sales"
@@ -160,7 +160,7 @@
 
                   <v-list-item-content class="text-center">
                     <span class="text-xs font-weight-bold text-body">
-                      Bounce:
+                       Raza Chaku:
                     </span>
                     <v-list-item-title
                       v-text="chat.bounce"
@@ -331,50 +331,50 @@ export default {
       stats: [
         {
           text: "Cant. Total de llamas",
-          value: "$230,220",
+          value: "2000",
           growth: "+55%",
         },
         {
           text: "Cant. Total de Productores",
-          value: "3.200",
+          value: "850",
           growth: "+12%",
         },
         {
           text: "Cant. Crías Nacidas",
-          value: "$1.200",
+          value: "120",
           growth: "+$213",
         },
       ],
       countries: [
         {
           avatar: require("@/assets/img/icons/flags/US.png"),
-          country: "United States",
-          sales: "2.500",
-          bounce: "29.9%",
+          country: "CHAUPIMARCA",
+          sales: "61",
+          bounce: "29",
         },
         {
           avatar: require("@/assets/img/icons/flags/DE.png"),
-          country: "Germany",
-          sales: "3.900",
-          bounce: "40.22%",
+          country: "HUACHÓN",
+          sales: "39",
+          bounce: "40",
         },
         {
           avatar: require("@/assets/img/icons/flags/GB.png"),
-          country: "Great Britain",
-          sales: "1.400",
-          bounce: "23.44%",
+          country: "HUARIACA",
+          sales: "14",
+          bounce: "23",
         },
         {
           avatar: require("@/assets/img/icons/flags/BR.png"),
-          country: "Brasil",
-          sales: "562",
-          bounce: "32.14%",
+          country: "HUAYLLAY",
+          sales: "56",
+          bounce: "32",
         },
         {
           avatar: require("@/assets/img/icons/flags/AU.png"),
-          country: "Australia",
-          sales: "400",
-          bounce: "56.83%",
+          country: "NINACACA",
+          sales: "40",
+          bounce: "56",
         },
       ],
       products: [

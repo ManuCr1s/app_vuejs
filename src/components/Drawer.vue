@@ -53,7 +53,7 @@
       >
         <template v-slot:activator>
           <v-avatar size="30" class="my-3 ms-2">
-            <img src="@/assets/img/team-3.jpg" alt="Brooklyn" />
+            <img src="@/assets/img/team-3.jpg" alt="Avatar" />
           </v-avatar>
 
           <v-list-item-content>
@@ -405,7 +405,7 @@ export default {
     ],
     itemsDocs: [
       {
-        action: "upcoming",
+        action: "assignment_ind",
         link: "/productores",
         title: "Productores",
         external: false,
@@ -423,15 +423,15 @@ export default {
         external: false,
       },
       {
-        action: "receipt_long",
+        action: "device_hub",
         link: "/pedigris",
-        title: "Pedigri",
+        title: "Pedigrí",
         external: true,
       },
       {
-        action: "receipt_long",
+        action: "share",
         link: "/valores",
-        title: "Valores Geneticos",
+        title: "Valores Genéticos",
         external: false,
       },
     ],
@@ -445,7 +445,7 @@ export default {
     ],
     itemsPages: [
       {
-        action: "image",
+        action: "people",
         active: false,
         title: "Roles",
         items: [
@@ -458,16 +458,16 @@ export default {
         ],
       },
       {
-        action: "apps",
+        action: "location_on",
         active: false,
-        title: "Ubicacion",
+        title: "Ubicación",
         items: [
           { title: "Centros Poblados", prefix: "CP", link: "/centros" },
           { title: "Anexos", prefix: "A", link: "/anexos" },
         ],
       },
       {
-        action: "shopping_basket",
+        action: "person",
         active: false,
         title: "Usuarios",
         items: [

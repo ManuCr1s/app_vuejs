@@ -69,7 +69,7 @@
                       font-weight-normal
                       text-capitalize
                       btn-primary
-                      bg-gradient-primary
+                      bg-gradient-success
                       py-3
                       px-6
                       ms-3
@@ -192,7 +192,7 @@
                         font-weight-normal
                         text-capitalize
                         btn-ls btn-primary
-                        bg-gradient-primary
+                        bg-gradient-success
                         py-3
                         px-6
                       "
@@ -235,7 +235,7 @@
                         font-weight-normal
                         text-capitalize
                         btn-ls btn-primary
-                        bg-gradient-primary
+                        bg-gradient-danger
                         py-3
                         px-6
                       "
@@ -353,7 +353,7 @@
               prev-icon="fa fa-angle-left"
               next-icon="fa fa-angle-right"
               class="pagination"
-              color="#D81B60"
+              color="#59b15d"
               v-model="page"
               :length="pageCount"
               circle

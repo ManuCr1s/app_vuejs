@@ -11,8 +11,8 @@
             <v-row>
               <v-col cols="12" md="6">
                 <div class="copyright text-body-2 ls-0 text-white">
-                  © {{ new Date().getFullYear() }} Dirección Regional de Agricultura Pasco. Desarrollado por
-                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  © {{ new Date().getFullYear() }} Dirección Regional de Agricultura Pasco.
+                  <!-- <i class="fa fa-heart" aria-hidden="true"></i>
                   <a
                     href="https://www.creative-tim.com"
                     class="
@@ -22,7 +22,7 @@
                     "
                     target="_blank"
                     >Creative Tim</a
-                  >
+                  > -->
                 </div>
               </v-col>
 
@@ -93,13 +93,12 @@
                   "
                 >
                   Copyright © {{ new Date().getFullYear() }}
-                  Material by
-                  <a
+                  <!-- <a
                     href="https://www.creative-tim.com"
                     class="text-decoration-none btn-hover text-body ls-0"
                     target="_blank"
                     >Creative Tim</a
-                  >
+                  > -->
                 </p>
               </v-col>
             </v-row>
@@ -115,8 +114,8 @@
             <v-row>
               <v-col cols="12" md="6">
                 <div class="copyright text-body-2 ls-0 text-muted">
-                  © {{ new Date().getFullYear() }}, Dirección Regional de Agricultura Pasco. Desarrollado por
-                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  © {{ new Date().getFullYear() }}, Dirección Regional de Agricultura Pasco.
+                  <!-- <i class="fa fa-heart" aria-hidden="true"></i>
                   <a
                     href="https://www.creative-tim.com"
                     class="
@@ -126,7 +125,7 @@
                     "
                     target="_blank"
                     >Creative Tim</a
-                  >
+                  > -->
                 </div>
               </v-col>
 

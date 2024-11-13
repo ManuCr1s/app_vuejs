@@ -112,7 +112,7 @@
               v-on="on"
               small
             >
-              <v-icon class="material-icons-round" size="20">
+              <v-icon class="material-icons-round" size="40">
                 account_circle
               </v-icon>
               <v-badge
