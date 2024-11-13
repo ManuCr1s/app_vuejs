@@ -28,7 +28,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
               >
-                <title>shop</title>
+                <title>Inicio</title>
                 <g
                   stroke="none"
                   stroke-width="1"
@@ -112,7 +112,7 @@
               v-on="on"
               small
             >
-              <v-icon class="material-icons-round" size="20">
+              <v-icon class="material-icons-round" size="40">
                 account_circle
               </v-icon>
               <v-badge
@@ -177,7 +177,7 @@
                           <v-row>
                             <v-col>
                               <h6 class="text-sm font-weight-normal ms-2 text-typo">
-                                  Cerrar Sesion
+                                  Cerrar Sesión
                               </h6>
                             </v-col>
                           </v-row>

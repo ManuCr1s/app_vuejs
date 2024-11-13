@@ -1,8 +1,8 @@
 <template>
   <v-card class="card-shadow border-radius-xl px-4 py-4">
-    <h6 class="mb-4 text-h6 text-typo font-weight-bold">Población por Distrito</h6>
+    <h6 class="mb-4 text-h6 text-typo font-weight-bold">Productores por Distrito</h6>
     <div class="chart-area">
-      <canvas :height="340" :id="salesAgeChartID"></canvas>
+      <canvas :height="820" :id="salesAgeChartID"></canvas>
     </div>
   </v-card>
 </template>
@@ -20,15 +20,15 @@ export default {
     new Chart(document.getElementById(this.salesAgeChartID).getContext("2d"), {
       type: "bar",
       data: {
-        labels: ["16-20", "21-25", "26-30", "31-36", "36-42", "42-50", "50+"],
+        labels: ["CHAUPIMARCA", "HUACHÓN", "HUARIACA", "HUAYLLAY", "NINACACA", "PALLANCHACRA", "PAUCARTAMBO", "S.F.A. YARUSYACÁN", "SIMÓN BOLIVAR", "TICLACAYÁN", "TINYAHUARCO", "VICCO", "YANACANCHA", "YANAHUANCA", "CHACAYÁN", "GOYLLARISQUIZGA", "PAUCAR", "S.P. PILLAO", "S.A. TUSI", "TAPUC", "VILCABAMBA"],
         datasets: [
           {
-            label: "Sales by age",
+            label: "Población por distrito",
             weight: 5,
             borderWidth: 0,
             borderRadius: 4,
             backgroundColor: "#17c1e8",
-            data: [15, 20, 12, 60, 20, 15, 25],
+            data: [120, 200, 180, 210, 140, 150, 110, 120, 160, 210, 140, 150, 110, 120, 160, 90, 140, 100, 170, 140, 110],
             fill: false,
           },
         ],
@@ -55,7 +55,7 @@ export default {
             ticks: {
               display: true,
               padding: 10,
-              color: "#c1c4ce5c",
+              color: "#344767",
               font: {
                 size: 14,
                 weight: 300,

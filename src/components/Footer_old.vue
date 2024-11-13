@@ -11,8 +11,8 @@
             <v-row>
               <v-col cols="12" md="6">
                 <div class="copyright text-body-2 ls-0 text-white">
-                  © {{ new Date().getFullYear() }} Dirección Regional de Agricultura Pasco.
-                  <!-- <i class="fa fa-heart" aria-hidden="true"></i>
+                  © {{ new Date().getFullYear() }}, made with
+                  <i class="fa fa-heart" aria-hidden="true"></i> by
                   <a
                     href="https://www.creative-tim.com"
                     class="
@@ -22,7 +22,8 @@
                     "
                     target="_blank"
                     >Creative Tim</a
-                  > -->
+                  >
+                  for a better web.
                 </div>
               </v-col>
 
@@ -66,7 +67,7 @@
                 >
               </v-col>
               <v-col cols="8" class="mx-auto text-center">
-                <!-- <v-btn
+                <v-btn
                   v-for="item in icons"
                   :key="item.icon"
                   icon
@@ -78,7 +79,7 @@
                   target="_blank"
                 >
                   <v-icon size="18">{{ item.icon }}</v-icon>
-                </v-btn> -->
+                </v-btn>
               </v-col>
             </v-row>
             <v-row>
@@ -93,12 +94,13 @@
                   "
                 >
                   Copyright © {{ new Date().getFullYear() }}
-                  <!-- <a
+                  Material by
+                  <a
                     href="https://www.creative-tim.com"
                     class="text-decoration-none btn-hover text-body ls-0"
                     target="_blank"
                     >Creative Tim</a
-                  > -->
+                  >
                 </p>
               </v-col>
             </v-row>
@@ -114,8 +116,8 @@
             <v-row>
               <v-col cols="12" md="6">
                 <div class="copyright text-body-2 ls-0 text-muted">
-                  © {{ new Date().getFullYear() }}, Dirección Regional de Agricultura Pasco.
-                  <!-- <i class="fa fa-heart" aria-hidden="true"></i>
+                  © {{ new Date().getFullYear() }}, made with
+                  <i class="fa fa-heart" aria-hidden="true"></i> by
                   <a
                     href="https://www.creative-tim.com"
                     class="
@@ -125,7 +127,8 @@
                     "
                     target="_blank"
                     >Creative Tim</a
-                  > -->
+                  >
+                  for a better web.
                 </div>
               </v-col>
 
@@ -158,49 +161,49 @@
   </div>
 </template>
 <script>
-// export default {
-//   name: "content-footer",
-//   props: {
-//     auth: Boolean,
-//   },
-//   data() {
-//     return {
-//       footer: [
-//         {
-//           linkName: "Creative Tim",
-//           link: "https://www.creative-tim.com/",
-//         },
-//         {
-//           linkName: "About Us",
-//           link: "https://www.creative-tim.com/presentation",
-//         },
-//         {
-//           linkName: "Blog",
-//           link: "http://blog.creative-tim.com/",
-//         },
-//         {
-//           linkName: "License",
-//           link: "https://www.creative-tim.com/license",
-//         },
-//       ],
-//       icons: [
-//         {
-//           icon: "fab fa-dribbble",
-//         },
-//         {
-//           icon: "fab fa-twitter",
-//         },
-//         {
-//           icon: "fab fa-instagram",
-//         },
-//         {
-//           icon: "fab fa-pinterest",
-//         },
-//         {
-//           icon: "fab fa-github",
-//         },
-//       ],
-//     };
-//   },
-// };
+export default {
+  name: "content-footer",
+  props: {
+    auth: Boolean,
+  },
+  data() {
+    return {
+      footer: [
+        {
+          linkName: "Creative Tim",
+          link: "https://www.creative-tim.com/",
+        },
+        {
+          linkName: "About Us",
+          link: "https://www.creative-tim.com/presentation",
+        },
+        {
+          linkName: "Blog",
+          link: "http://blog.creative-tim.com/",
+        },
+        {
+          linkName: "License",
+          link: "https://www.creative-tim.com/license",
+        },
+      ],
+      icons: [
+        {
+          icon: "fab fa-dribbble",
+        },
+        {
+          icon: "fab fa-twitter",
+        },
+        {
+          icon: "fab fa-instagram",
+        },
+        {
+          icon: "fab fa-pinterest",
+        },
+        {
+          icon: "fab fa-github",
+        },
+      ],
+    };
+  },
+};
 </script>

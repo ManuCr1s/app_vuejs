@@ -6,8 +6,7 @@
           {{currentRoute}}
         </h5>
         <p class="text-sm text-body font-weight-light mb-0">
-          Features include sorting, searching, pagination, content-editing, and
-          row selection.
+          Explora la lista de llamas con facilidad para buscar y filtrar datos.
         </p>
       </div>
 
@@ -70,7 +69,7 @@
                       font-weight-normal
                       text-capitalize
                       btn-primary
-                      bg-gradient-primary
+                      bg-gradient-success
                       py-3
                       px-6
                       ms-3
@@ -193,7 +192,7 @@
                         font-weight-normal
                         text-capitalize
                         btn-ls btn-primary
-                        bg-gradient-primary
+                        bg-gradient-success
                         py-3
                         px-6
                       "
@@ -236,7 +235,7 @@
                         font-weight-normal
                         text-capitalize
                         btn-ls btn-primary
-                        bg-gradient-primary
+                        bg-gradient-danger
                         py-3
                         px-6
                       "
@@ -288,7 +287,7 @@
               color="#67748e"
             >
               <v-icon size="14" class="material-icons-round"
-                >remove_red_eye</v-icon
+                >visibility</v-icon
               >
             </v-btn>
 
@@ -354,7 +353,7 @@
               prev-icon="fa fa-angle-left"
               next-icon="fa fa-angle-right"
               class="pagination"
-              color="#D81B60"
+              color="#59b15d"
               v-model="page"
               :length="pageCount"
               circle
@@ -400,7 +399,7 @@ export default {
       },
       headers: [
         {
-          text: "Name",
+          text: "Nombre",
           align: "start",
           cellClass: "border-bottom",
           sortable: false,
@@ -414,17 +413,17 @@ export default {
           class: "text-secondary font-weight-bolder opacity-7",
         },
         {
-          text: "Age",
+          text: "Edad",
           value: "age",
           class: "text-secondary font-weight-bolder opacity-7",
         },
         {
-          text: "Salary",
+          text: "Estado",
           value: "salary",
           class: "text-secondary font-weight-bolder opacity-7",
         },
         {
-          text: "Actions",
+          text: "Acciones",
           value: "actions",
           sortable: false,
           class: "text-secondary font-weight-bolder opacity-7",

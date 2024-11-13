@@ -1,7 +1,7 @@
 <template>
   <v-card class="card-shadow border-radius-xl px-4 py-4">
     <div class="d-flex justify-content-between">
-      <h6 class="mb-0 text-h6 text-typo font-weight-bold">Cant. Llamas por Mes</h6>
+      <h6 class="mb-0 text-h6 text-typo font-weight-bold">Llamas por Mes</h6>
       <v-tooltip left>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -28,7 +28,8 @@
             >
           </v-btn>
         </template>
-        <span>Datos actualizados al 01/11/2024</span>
+        <span>Datos actualizados al {{ new Date().toLocaleDateString('es-ES') }}
+        </span>
       </v-tooltip>
     </div>
     <div class="d-flex">
