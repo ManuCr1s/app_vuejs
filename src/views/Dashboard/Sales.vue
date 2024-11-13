@@ -121,7 +121,7 @@
         <v-col md="4">
           <v-card class="card-shadow border-radius-xl px-4 py-4">
             <h6 class="mb-0 text-h6 text-typo font-weight-bold">
-              Cant. Llamas por Distrito
+              Llamas por Distrito
             </h6>
             <v-card-text class="pt-3 pb-0 px-0">
               <v-list class="py-0">
@@ -330,17 +330,17 @@ export default {
     return {
       stats: [
         {
-          text: "Cant. Total de llamas",
+          text: "Total de llamas",
           value: "2000",
           growth: "+55%",
         },
         {
-          text: "Cant. Total de Productores",
+          text: "Total de Productores",
           value: "850",
           growth: "+12%",
         },
         {
-          text: "Cant. Crías Nacidas",
+          text: "Crías Nacidas",
           value: "120",
           growth: "+$213",
         },

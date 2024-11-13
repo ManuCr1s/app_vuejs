@@ -417,7 +417,7 @@ export default {
           class: "text-secondary font-weight-bolder opacity-7",
         },
         {
-          text: "Actions",
+          text: "Acciones",
           value: "actions",
           sortable: false,
           class: "text-secondary font-weight-bolder opacity-7",

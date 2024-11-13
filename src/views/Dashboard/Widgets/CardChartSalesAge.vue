@@ -1,6 +1,6 @@
 <template>
   <v-card class="card-shadow border-radius-xl px-4 py-4">
-    <h6 class="mb-4 text-h6 text-typo font-weight-bold">Cant. de Productores por Distrito</h6>
+    <h6 class="mb-4 text-h6 text-typo font-weight-bold">Productores por Distrito</h6>
     <div class="chart-area">
       <canvas :height="820" :id="salesAgeChartID"></canvas>
     </div>

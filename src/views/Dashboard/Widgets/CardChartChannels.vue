@@ -1,7 +1,7 @@
 <template>
   <v-card class="card-shadow border-radius-xl px-4 py-4">
     <div class="d-flex justify-content-between">
-      <h6 class="mb-0 text-h6 text-typo font-weight-bold">Cant. Productores por Provincia</h6>
+      <h6 class="mb-0 text-h6 text-typo font-weight-bold">Productores por Provincia</h6>
       <v-tooltip top>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -55,7 +55,7 @@
           <v-badge
             bottom
             bordered
-            color="#a0c4ff"
+            color="#17c1e8"
             dot
             offset-x="4"
             offset-y="9"
@@ -129,7 +129,7 @@ export default {
             tension: 0.9,
             pointRadius: 2,
             borderWidth: 1,
-            backgroundColor: ["#a0c4ff","#f9f871"],
+            backgroundColor: ["#17c1e8","#f9f871"],
             data: [15, 20],
             fill: false,
           },

@@ -26,7 +26,7 @@
                 </v-col>
                 <v-col lg="6" class="text-center">
                   <h4 class="text-h4 text-white font-weight-bold opacity-9">
-                    Nombre y apellido
+                    Since Last Charge
                   </h4>
                   <hr class="horizontal light mt-1 mb-4" />
                   <div class="d-flex justify-content-center">
@@ -66,7 +66,7 @@
                 </v-col>
                 <v-col lg="6" class="text-center">
                   <h4 class="text-h4 text-white font-weight-bold opacity-9">
-                    Nombre de fundo
+                    Nearest Charger
                   </h4>
                   <hr class="horizontal light mt-1 mb-4" />
                   <div class="d-flex">
@@ -156,7 +156,7 @@
                   </v-col>
                   <v-col sm="8" class="text-end">
                     <p class="text-white text-sm mb-0 text-body">
-                      Llamas K'ara
+                      Today's Trip
                     </p>
                     <h4 class="text-h4 text-dark font-weight-bolder mb-0">
                       145 Km
@@ -182,7 +182,7 @@
                   </v-col>
                   <v-col sm="8" class="text-end">
                     <p class="text-white text-sm mb-0 text-body">
-                      Llamas Chaku
+                      Battery Health
                     </p>
                     <h4 class="text-h4 text-dark font-weight-bolder mb-0">
                       99 %
@@ -212,7 +212,7 @@
                   </v-col>
                   <v-col sm="8" class="text-end">
                     <p class="text-white text-sm mb-0 text-body">
-                      Llamas Macho
+                      Average Speed
                     </p>
                     <h4 class="text-h4 text-dark font-weight-bolder mb-0">
                       56 Km/h
@@ -238,7 +238,7 @@
                   </v-col>
                   <v-col sm="8" class="text-end">
                     <p class="text-white text-sm mb-0 text-body">
-                      Llamas Hembra
+                      Music Volume
                     </p>
                     <h4 class="text-h4 text-dark font-weight-bolder mb-0">
                       15/100
