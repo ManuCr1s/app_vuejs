@@ -426,7 +426,7 @@ export default {
         action: "receipt_long",
         link: "/pedigris",
         title: "Pedigri",
-        external: true,
+        external: false,
       },
       {
         action: "receipt_long",

@@ -7,7 +7,9 @@ const Automotive = () => import("../views/Dashboard/Automotive.vue");
 const Productor = () => import( "@/views/Applications/Datatables.vue");
 const Roles = () => import( "@/views/Applications/Datatables.vue");
 const Llama = () => import( "@/views/Applications/Datatables.vue");
-const User = () => import( "@/views/Applications/Datatables.vue");
+const Usuario = () => import( "@/views/Applications/Datatables.vue");
+const Centro = () => import( "@/views/Applications/Datatables.vue");
+const Anexo = () => import( "@/views/Applications/Datatables.vue");
 const AuthLogin  = () => import( "@/views/Pages/Authentication/SignUp/Basic.vue");
 Vue.use(VueRouter);
 let loginPage = {
@@ -84,9 +86,27 @@ const routes = [
       },
     },
     {
+      path: "/centros",
+      name: "Datatables",
+      component: Centro,
+      meta: {
+        requiresAuth:true,
+        groupName: "Applications",
+      },
+    },
+    {
+      path: "/anexos",
+      name: "Datatables",
+      component: Usuario,
+      meta: {
+        requiresAuth:true,
+        groupName: "Applications",
+      },
+    },
+    {
       path: "/usuarios",
       name: "Datatables",
-      component: User,
+      component: Anexo,
       meta: {
         requiresAuth:true,
         groupName: "Applications",
