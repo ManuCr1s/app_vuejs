@@ -3,10 +3,11 @@
     <v-row class="px-4">
       <v-col md="12">
         <v-card class="card-shadow border-radius-xl">
-          <div class="px-4 pt-5">
-            <h6 class="mb-0 text-typo text-h6 font-weight-bold">
-                Roles de Usuario
-            </h6>
+          <div class="px-4 pt-5 d-flex justify-space-between">
+                <h6 class="mb-0 text-typo text-h6 font-weight-bold">
+                    Roles de Usuario
+                </h6>
+              <RoleForm :updating="true" ref="roleForm" :form="form" @submit="handleFormSubmit"/>
           </div>
           <div class="px-4 pt-6 pb-1">
             <div v-for="billing in billings" :key="billing.id_rol">
@@ -48,20 +49,9 @@
                       <v-icon size="12" class="me-2 material-icons-round"
                         >delete</v-icon
                       >
-                      Delete
+                      Eliminar
                     </v-btn>
-                    <v-btn
-                      :ripple="false"
-                      color="transparent"
-                      class="text-dark font-weight-bolder py-6 px-5 shadow-0"
-                      small
-                      simple
-                    >
-                      <v-icon size="12" class="me-2 material-icons-round"
-                        >edit</v-icon
-                      >
-                      Edit
-                    </v-btn>
+                    <RoleForm/>
                   </div>
                 </v-list-item-content>
               </v-list-item>
@@ -74,8 +64,12 @@
 </template>
 <script>
 import rolesService from '../../../modules/services/roleService';
+import RoleForm from '@/component/roles/form.vue';
 export default {
-  name: "Billing",
+  name: "Roles",
+  components: {
+    RoleForm
+  },
   methods:{
     showCancelAlert(rol) {
       this.$swal({
@@ -90,15 +84,31 @@ export default {
         },
       }).then(async (result) => {
         if (result.isConfirmed) {
-          await rolesService.deleteRole(billing.id_rol);
+          await rolesService.deleteRole(rol);
           this.$swal.fire("Registro Eliminado!", "El Rol fue eliminado exitosamente", "success");
         }
       });
     },
+    handleFormSubmit(formData) {
+         rolesService.createRole(formData)
+         .then(response => {
+              this.billings.push(response.data);
+              this.$refs.roleForm.close();
+              this.$refs.roleForm.reset();
+          })
+          .catch(error => {
+                throw error;  
+          });
+        
+    }
   },
   data: function () {
     return {
       billings: [],
+      form: {
+                nombre: '',
+                descripcion: ''
+            }
     };
   },
  async mounted(){
@@ -106,6 +116,12 @@ export default {
       this.billings = await rolesService.getRole();
     } catch (error) {
       this.error = 'Hubo un problema al obtener los roles';
+    }
+  },
+  props:{
+    roles:{
+      type:Object,
+      required:true
     }
   }
 };

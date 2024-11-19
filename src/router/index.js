@@ -5,7 +5,7 @@ import AuthBasicLayout from "../views/Layout/AuthBasicLayout";
 const Sales = () => import("../views/Dashboard/Sales.vue");
 const Automotive = () => import("../views/Dashboard/Automotive.vue");
 const Productor = () => import( "@/views/Applications/Datatables/Datatables.vue");
-const Roles = () => import( "@/views/Applications/Datatables/Datatables.vue");
+const Roles = () => import( "@/page/admin/roles/RoleView.vue");
 const Llama = () => import( "@/views/Applications/Datatables/Datatables.vue");
 const Usuario = () => import( "@/views/Applications/Datatables/Datatables.vue");
 const Centro = () => import( "@/views/Applications/Datatables/Datatables.vue");
