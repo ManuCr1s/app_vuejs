@@ -8,8 +8,8 @@ const Productor = () => import( "@/views/Applications/Datatables/Datatables.vue"
 const Roles = () => import( "@/page/admin/roles/RoleView.vue");
 const Llama = () => import( "@/views/Applications/Datatables/Datatables.vue");
 const Usuario = () => import( "@/views/Applications/Datatables/Datatables.vue");
-const Centro = () => import( "@/views/Applications/Datatables/Datatables.vue");
-const Anexo = () => import( "@/views/Applications/Datatables/Datatables.vue");
+const Centro = () => import( "@/page/admin/centros/CentroView.vue");
+const Anexo = () => import( "@/page/admin/anexos/AnexoView.vue");
 const AuthLogin  = () => import( "@/views/Pages/Authentication/SignUp/Basic.vue");
 Vue.use(VueRouter);
 let loginPage = {
@@ -88,7 +88,7 @@ const routes = [
     },
     {
       path: "/centros",
-      name: "Datatables",
+      name: "Centros",
       component: Centro,
       meta: {
         requiresAuth:true,
@@ -97,8 +97,8 @@ const routes = [
     },
     {
       path: "/anexos",
-      name: "Datatables",
-      component: Usuario,
+      name: "Anexo",
+      component: Anexo,
       meta: {
         requiresAuth:true,
         groupName: "Applications",
@@ -106,8 +106,8 @@ const routes = [
     },
     {
       path: "/usuarios",
-      name: "Datatables",
-      component: Anexo,
+      name: "Usuario",
+      component: Usuario,
       meta: {
         requiresAuth:true,
         groupName: "Applications",
