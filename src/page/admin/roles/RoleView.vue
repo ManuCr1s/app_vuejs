@@ -23,7 +23,7 @@
                     <span class="mb-2 text-xs text-body"
                       >CODIGO DE ROL:
                       <span class="text-dark font-weight-bold ms-sm-2">{{
-                        billing.id_rol
+                        billing.descripcion
                       }}</span></span
                     >
                   </div>
@@ -51,7 +51,7 @@
                       >
                       Eliminar
                     </v-btn>
-                    <RoleForm/>
+                    <RoleForm :updating="false" ref="roleForm"/>
                   </div>
                 </v-list-item-content>
               </v-list-item>

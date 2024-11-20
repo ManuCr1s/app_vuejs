@@ -4,9 +4,9 @@ import DashboardLayout from "../views/Layout/DashboardLayout.vue";
 import AuthBasicLayout from "../views/Layout/AuthBasicLayout";
 const Sales = () => import("../views/Dashboard/Sales.vue");
 const Automotive = () => import("../views/Dashboard/Automotive.vue");
-const Productor = () => import( "@/views/Applications/Datatables/Datatables.vue");
+const Productor = () => import( "@/page/productor/ProductorView.vue");
 const Roles = () => import( "@/page/admin/roles/RoleView.vue");
-const Llama = () => import( "@/views/Applications/Datatables/Datatables.vue");
+const Llama = () => import( "@/page/productor/LlamaView.vue");
 const Usuario = () => import( "@/views/Applications/Datatables/Datatables.vue");
 const Centro = () => import( "@/page/admin/centros/CentroView.vue");
 const Anexo = () => import( "@/page/admin/anexos/AnexoView.vue");
@@ -70,7 +70,7 @@ const routes = [
     },
     {
       path: "/productores",
-      name: "Datatables",
+      name: "Productores",
       component: Productor,
       meta: {
         requiresAuth:true,
@@ -79,7 +79,7 @@ const routes = [
     },
     {
       path: "/llamas",
-      name: "Datatables",
+      name: "Llamas",
       component: Llama,
       meta: {
         requiresAuth:true,
