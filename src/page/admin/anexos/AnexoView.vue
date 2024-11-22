@@ -77,7 +77,7 @@ export default {
         text: "",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonText: "Si, ELiminar Rol",
+        confirmButtonText: "Si, Eliminar Anexo",
         customClass: {
           confirmButton: "btn bg-gradient-success",
           cancelButton: "btn bg-gradient-danger",

@@ -77,7 +77,7 @@
           text: "Asegurese de no tener un usuario registrado con ese Rol",
           icon: "warning",
           showCancelButton: true,
-          confirmButtonText: "Si, ELiminar Rol",
+          confirmButtonText: "Si, Eliminar Rol",
           customClass: {
             confirmButton: "btn bg-gradient-success",
             cancelButton: "btn bg-gradient-danger",
