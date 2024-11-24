@@ -32,29 +32,17 @@
           Editar
         </v-btn>
       </template>
-      <v-card class="card-shadow border-radius-xl">
-        <form @submit.prevent="handleSubmit">
-          <div class="card-header-padding card-border-bottom">
-            <span class="font-weight-bold text-h5 text-typo mb-0">Formulario</span>
-          </div>
-          <v-card-text class="card-padding">
-            <v-container class="px-0">
-              <v-row>
-                <v-col cols="12">
+      <v-card class="card-shadow border-radius-xl mt-6" id="basic">
+    <div class="px-6 py-6">
+      <h5 class="text-h5 font-weight-bold text-typo">Registrar nuevo productor</h5>
+    </div>
+    <div class="px-6 pb-6 pt-0">
+      <v-row>
+        <v-col cols="12">
                 <v-text-field
-                    hide-details
-                    class="
-                        input-style
-                        font-size-input
-                        text-light-input
-                        placeholder-light
-                        input-icon
-                    "
-                    dense
-                    flat
-                    filled
-                    solo
-                    height="43"
+                    color="#e91e63"
+                    class="font-size-input input-style"                       
+                    label="DNI"
                     placeholder="DNI"
                     v-model="form.dni"
                 >
@@ -76,222 +64,137 @@
                     </template>
                 </v-text-field>
                 </v-col>
+        <v-col sm="4" cols="12">
+          <v-text-field
+            color="#e91e63"
+            label="Nombres"
+            placeholder="Nombres"
+            class="font-size-input input-style"
+            readonly
+          >
+          </v-text-field>
+        </v-col>
+        <v-col sm="4" cols="12">
+          <v-text-field
+            color="#e91e63"
+            label="Apellidos"
+            placeholder="Apellidos"
+            class="font-size-input input-style"
+            readonly
+          >
+          </v-text-field>
+        </v-col>
+        <v-col sm="4" cols="12" class="d-flex align-center">
   
-                <v-col cols="12">
-                  <v-text-field
-                    hide-details
-                    class="
-                      input-style
-                      font-size-input
-                      text-light-input
-                      placeholder-light
-                      input-icon
-                    "
-                    dense
-                    flat
-                    filled
-                    solo
-                    height="43"
-                    placeholder="Apellido Paterno"
-                    v-model="form.apaterno"
-                  ></v-text-field>
-                </v-col>
-    
-                <v-col cols="12">
-                  <v-text-field
-                    hide-details
-                    class="
-                      input-style
-                      font-size-input
-                      text-light-input
-                      placeholder-light
-                      input-icon
-                    "
-                    dense
-                    flat
-                    filled
-                    solo
-                    height="43"
-                    placeholder="Apellido Materno"
-                    v-model="form.amaterno"
-                  ></v-text-field>
-                </v-col>
-                                      <v-col cols="12">
-                                          <v-text-field
-                                          hide-details
-                                          class="
-                                              input-style
-                                              font-size-input
-                                              text-light-input
-                                              placeholder-light
-                                              input-icon
-                                          "
-                                          dense
-                                          flat
-                                          filled
-                                          solo
-                                          height="43"
-                                          placeholder="Nombre"
-                                          v-model="form.nombre"
-                                          ></v-text-field>
-                                      </v-col>
-                                      <v-col cols="12">
-                                          <v-text-field
-                                          hide-details
-                                          class="
-                                              input-style
-                                              font-size-input
-                                              text-light-input
-                                              placeholder-light
-                                              input-icon
-                                          "
-                                          dense
-                                          flat
-                                          filled
-                                          solo
-                                          height="43"
-                                          placeholder="Nombre de Fundo"
-                                          v-model="form.fundo"
-                                          ></v-text-field>
-                                      </v-col>
-                                      <v-col cols="12">
-                                          <v-select
-                                          hide-details
-                                          class="
-                                              input-style
-                                              font-size-input
-                                              text-light-input
-                                              placeholder-light
-                                              input-icon
-                                          "
-                                          dense
-                                          flat
-                                          filled
-                                          solo
-                                          height="43"
-                                          placeholder="Seleccione provincia"
-                                          v-model="form.provincia"
-                                          :items="opciones"
-                                          ></v-select>
-                                      </v-col>
-                                      <v-col cols="12">
-                                          <v-select
-                                          hide-details
-                                          class="
-                                              input-style
-                                              font-size-input
-                                              text-light-input
-                                              placeholder-light
-                                              input-icon
-                                          "
-                                          dense
-                                          flat
-                                          filled
-                                          solo
-                                          height="43"
-                                          placeholder="Seleccione distrito"
-                                          v-model="form.distrito"
-                                          :items="opciones"
-                                          ></v-select>
-                                      </v-col>
-                                      <v-col cols="12">
-                                          <v-select
-                                          hide-details
-                                          class="
-                                              input-style
-                                              font-size-input
-                                              text-light-input
-                                              placeholder-light
-                                              input-icon
-                                          "
-                                          dense
-                                          flat
-                                          filled
-                                          solo
-                                          height="43"
-                                          placeholder="Seleccione centro poblado"
-                                          v-model="form.cpoblado"
-                                          :items="opciones"
-                                          ></v-select>
-                                      </v-col>
-                                      <v-col cols="12">
-                                          <v-select
-                                          hide-details
-                                          class="
-                                              input-style
-                                              font-size-input
-                                              text-light-input
-                                              placeholder-light
-                                              input-icon
-                                          "
-                                          dense
-                                          flat
-                                          filled
-                                          solo
-                                          height="43"
-                                          placeholder="Seleccione caserio/anexo"
-                                          v-model="form.canexo"
-                                          :items="opciones"
-                                          ></v-select>
-                                      </v-col>
-                                      <v-col cols="12">
-                                          <v-select
-                                          hide-details
-                                          class="
-                                              input-style
-                                              font-size-input
-                                              text-light-input
-                                              placeholder-light
-                                              input-icon
-                                          "
-                                          dense
-                                          flat
-                                          filled
-                                          solo
-                                          height="43"
-                                          placeholder="Estado de productor"
-                                          v-model="form.estado"
-                                          :items="opciones"
-                                          ></v-select>
-                                      </v-col>
+          <v-text-field
+  v-model="fileName"
+  color="#e91e63"
+  label="Fotografía"
+  class="font-size-input input-style"
+  placeholder="Inserte fotografía"
+  readonly
+></v-text-field>
+
   
-              </v-row>
-            </v-container>
-          </v-card-text>
-          <v-card-actions class="card-padding d-flex justify-end">
-            <v-btn
-              @click="close"
-              elevation="0"
-              :ripple="false"
-              height="43"
-              class="
-                font-weight-normal
-                text-capitalize
-                btn-ls btn-outline-secondary
-                bg-transparent
-                py-3
-                px-6
-              "
-              >Cancelar</v-btn
-            >
-            <v-btn
-              elevation="0"
-              :ripple="false"
-              height="43"
-              class="
-                font-weight-normal
-                text-capitalize
-                btn-ls btn-primary
-                bg-gradient-success
-                py-3
-                px-6
-              "
-              type="submit"
-              >Guardar</v-btn
-            >
-          </v-card-actions>
-        </form>
-      </v-card>
+  <v-btn 
+  class="
+                        font-weight-normal
+                        text-capitalize
+                        btn-primary
+                        bg-gradient-success
+                        py-2
+                        px-4
+                        "
+                        elevation="0"
+    @click="triggerFileInput"
+  >
+    Cargar Archivo
+  </v-btn>
+
+
+  <input 
+    type="file" 
+    ref="fileInput" 
+    style="display: none;" 
+    accept=".jpg,.png"
+    @change="handleFileUpload"
+  />
+</v-col>
+      </v-row>
+      <v-row class="mt-0">
+        <v-col sm="4" cols="12">
+          <v-select
+            :items="gender"
+            label="Seleccione provincia"
+            color="#e91e63"
+            class="font-size-input input-style"
+            single-line
+            height="36"
+          >
+          </v-select>
+        </v-col>
+        <v-col sm="4" cols="12">
+
+          <v-select
+            :items="gender"
+            label="Seleccione distrito"
+            color="#e91e63"
+            class="font-size-input input-style"
+            single-line
+            height="36"
+          >
+          </v-select>
+        </v-col>
+        <v-col sm="4" cols="12">
+          <v-select
+            :items="gender"
+            label="Seleccione centro poblado"
+            color="#e91e63"
+            class="font-size-input input-style"
+            single-line
+            height="36"
+          >
+          </v-select>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="6" class="py-0">
+
+          <v-select
+            :items="gender"
+            label="Seleccione caserío/anexo"
+            color="#e91e63"
+            class="font-size-input input-style"
+            single-line
+            height="36"
+          >
+          </v-select>
+        </v-col>
+        <v-col cols="6" class="py-0">
+          <v-text-field
+            color="#e91e63"
+            label="Ingrese nombre de fundo"
+            placeholder="Ingrese nombre de fundo"
+            class="font-size-input input-style"
+          >
+          </v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="6" class="pb-0">
+          <v-select
+            :items="languages"
+            label="Estado de productor"
+            color="#e91e63"
+            class="font-size-input input-style"
+            single-line
+            height="36"
+          >
+          </v-select>
+        </v-col>
+      </v-row>
+    </div>
+  </v-card>
     </v-dialog>
   </template>
   
@@ -300,6 +203,7 @@
     name: "ProductorForm",
     data() {
       return {
+        fileName: "",
         dialog: false,
         form: {
           nombre: "",
@@ -321,9 +225,33 @@
         close() {
             this.dialog = false;
         },
+        triggerFileInput() {
+      this.$refs.fileInput.click();
+    },
         handleSubmit() {
             this.$emit('submit', this.form);
         },
+        handleFileUpload(event) {
+  const file = event.target.files[0]; // Obtén el archivo seleccionado
+  console.log("Archivo seleccionado:", file); // Depuración
+
+  if (file) {
+    const validExtensions = ['image/jpeg', 'image/png'];
+    if (!validExtensions.includes(file.type)) {
+      alert('Solo se permiten archivos JPG o PNG.');
+      return;
+    }
+    if (file.size > 2 * 1024 * 1024) { // Límite de tamaño de 2 MB
+      alert('El archivo debe ser menor a 2 MB.');
+      return;
+    }
+
+    this.fileName = file.name; // Actualiza el nombre del archivo
+    console.log("Nombre del archivo actualizado:", this.fileName); // Depuración
+  } else {
+    console.log("No se seleccionó ningún archivo."); // Depuración
+  }
+},
         reset() {
             this.form.nombre = '';
             this.form.descripcion = '';
