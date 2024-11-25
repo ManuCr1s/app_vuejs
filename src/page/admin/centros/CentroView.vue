@@ -7,6 +7,7 @@
                 <h6 class="mb-0 text-typo text-h6 font-weight-bold">
                     Centros Poblados
                 </h6>
+                <CentroForm :updating="true" ref="roleForm" :form="form" @submit="handleFormSubmit"/>
           </div>
           <div class="px-4 pt-6 pb-1">
             <div v-for="billing in billings" :key="billing.id_centro_poblado">
@@ -50,6 +51,7 @@
                       >
                       Eliminar
                     </v-btn>
+                    <CentroForm :updating="false" ref="roleForm"/>
                     <RoleForm/>
                   </div>
                 </v-list-item-content>
@@ -63,9 +65,12 @@
 </template>
 <script>
 import centroService from '../../../modules/services/centroService';
-
+import CentroForm from '@/component/centro/form.vue';
 export default {
   name: "Centro",
+  components: {
+        CentroForm
+    },
   methods:{
     showCancelAlert(rol) {
       this.$swal({

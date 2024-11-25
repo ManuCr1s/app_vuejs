@@ -5,9 +5,9 @@
           <v-card class="card-shadow border-radius-xl">
             <div class="px-4 pt-5 d-flex justify-space-between">
                   <h6 class="mb-0 text-typo text-h6 font-weight-bold">
-                      Productores
+                      Usuarios
                   </h6>
-                <ProductorForm :updating="true" ref="roleForm" :form="form" @submit="handleFormSubmit"/>
+                <UsuarioForm :updating="true" ref="roleForm" :form="form" @submit="handleFormSubmit"/>
             </div>
             <div class="px-4 pt-6 pb-1">
               <div v-for="billing in billings" :key="billing.id_rol">
@@ -51,7 +51,7 @@
                         >
                         Eliminar
                       </v-btn>
-                      <ProductorForm :updating="false" ref="roleForm"/>
+                      <UsuarioForm :updating="false" ref="roleForm"/>
                     </div>
                   </v-list-item-content>
                 </v-list-item>
@@ -63,12 +63,12 @@
     </v-container>
   </template>
   <script>
-  import rolesService from '../../modules/services/roleService';
-  import ProductorForm from '@/component/productor/form.vue';
+  import rolesService from '../../../modules/services/roleService';
+  import UsuarioForm from '@/component/usuarios/form.vue';
   export default {
-    name: "Productores",
+    name: "Usuarios",
     components: {
-        ProductorForm
+        UsuarioForm
     },
     methods:{
       showCancelAlert(rol) {
