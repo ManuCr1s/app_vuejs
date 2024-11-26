@@ -10,15 +10,13 @@ const getRole = () => {
             });
 }
 const deleteRole = ($id) => {
-    return axios.delete('v1/roles/${$id}'
+    return axios.delete(`v1/roles/${$id}`)
         .then(response => {
             return response.data;
           })
         .catch(error => {
             throw error;  
         })
-    )
-
 }
 const createRole = (data) => {
     return axios.post('v1/roles',data)

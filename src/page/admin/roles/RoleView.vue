@@ -7,7 +7,7 @@
                 <h6 class="mb-0 text-typo text-h6 font-weight-bold">
                     Roles de Usuario
                 </h6>
-              <RoleForm :updating="true" ref="roleForm" :form="form" @submit="handleFormSubmit"/>
+              <CreateRole ref="createRole" :form="form" @submit="handleFormSubmit"/>
           </div>
           <div class="px-4 pt-6 pb-1">
             <div v-for="billing in billings" :key="billing.id_rol">
@@ -51,7 +51,7 @@
                       >
                       Eliminar
                     </v-btn>
-                    <RoleForm :updating="false" ref="roleForm"/>
+                    <EditRole :data="billing" @submit="handleFormSubmit"/>
                   </div>
                 </v-list-item-content>
               </v-list-item>
@@ -64,12 +64,23 @@
 </template>
 <script>
 import rolesService from '../../../modules/services/roleService';
-import RoleForm from '@/component/roles/form.vue';
+import CreateRole from '@/component/roles/CreateRole.vue';
+import EditRole from '@/component/roles/EditRole.vue';
 export default {
   name: "Roles",
   components: {
-    RoleForm
+    CreateRole,EditRole
   },
+    data: function () {
+      return {
+          billings: [],
+          form:{
+            nombre:'',
+            descripcion:'',
+          },
+          data:{}
+      };
+    },
   methods:{
     showCancelAlert(rol) {
       this.$swal({
@@ -82,11 +93,18 @@ export default {
           confirmButton: "btn bg-gradient-success",
           cancelButton: "btn bg-gradient-danger",
         },
-      }).then(async (result) => {
+      }).then((result) => {
         if (result.isConfirmed) {
-          await rolesService.deleteRole(rol);
-          this.$swal.fire("Registro Eliminado!", "El Rol fue eliminado exitosamente", "success");
-        }
+          rolesService.deleteRole(rol)
+          .then(() => {
+                    console.log(billings);
+                    this.$swal.fire("Registro Eliminado!", "El Rol fue eliminado exitosamente", "success");
+                  
+                })
+          .catch((error) => {
+                  this.$swal.fire("Error", "No se pudo eliminar el Rol", "error");
+              });
+      }
       });
     },
     handleFormSubmit(formData) {
@@ -100,18 +118,10 @@ export default {
                 throw error;  
           });
         
-    }
+    },
   },
-  data: function () {
-    return {
-      billings: [],
-      form: {
-                nombre: '',
-                descripcion: ''
-            }
-    };
-  },
- async mounted(){
+
+  async mounted(){
     try {
       this.billings = await rolesService.getRole();
     } catch (error) {
