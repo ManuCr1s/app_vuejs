@@ -7,7 +7,7 @@ const Automotive = () => import("../views/Dashboard/Automotive.vue");
 const Productor = () => import( "@/page/productor/ProductorView.vue");
 const Roles = () => import( "@/page/admin/roles/RoleView.vue");
 const Llama = () => import( "@/page/productor/LlamaView.vue");
-const Usuario = () => import( "@/views/Applications/Datatables/Datatables.vue");
+const Usuario = () => import( "@/page/admin/usuarios/UserView.vue");
 const Centro = () => import( "@/page/admin/centros/CentroView.vue");
 const Anexo = () => import( "@/page/admin/anexos/AnexoView.vue");
 const AuthLogin  = () => import( "@/views/Pages/Authentication/SignUp/Basic.vue");

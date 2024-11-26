@@ -5,9 +5,9 @@
         <v-card class="card-shadow border-radius-xl">
           <div class="px-4 pt-5 d-flex justify-space-between">
                 <h6 class="mb-0 text-typo text-h6 font-weight-bold">
-                    Anexos
+                    Anexos o caseríos
                 </h6>
-              <RoleForm :updating="true" ref="roleForm" :form="form" @submit="handleFormSubmit"/>
+              <AnexoForm :updating="true" ref="anexoForm" :form="form" @submit="handleFormSubmit"/>
           </div>
           <div class="px-4 pt-6 pb-1">
             <div v-for="billing in billings" :key="billing.id_rol">
@@ -51,7 +51,7 @@
                       >
                       Eliminar
                     </v-btn>
-                    <RoleForm/>
+                    <AnexoForm/>
                   </div>
                 </v-list-item-content>
               </v-list-item>
@@ -64,11 +64,11 @@
 </template>
 <script>
 import anexoService from '../../../modules/services/anexoService';
-import RoleForm from '@/component/roles/CreateRole.vue';
+import AnexoForm from '@/component/anexo/CreateRole.vue';
 export default {
   name: "Anexos",
   components: {
-    RoleForm
+    AnexoForm
   },
   methods:{
     showCancelAlert(rol) {
@@ -93,8 +93,8 @@ export default {
       anexoService.createAnexo(formData)
          .then(response => {
               this.billings.push(response.data);
-              this.$refs.roleForm.close();
-              this.$refs.roleForm.reset();
+              this.$refs.anexoForm.close();
+              this.$refs.anexoForm.reset();
           })
           .catch(error => {
                 throw error;  
