@@ -64,7 +64,7 @@
 </template>
 <script>
 import anexoService from '../../../modules/services/anexoService';
-import AnexoForm from '@/component/anexo/CreateRole.vue';
+import AnexoForm from '@/component/anexo/form.vue';
 export default {
   name: "Anexos",
   components: {
