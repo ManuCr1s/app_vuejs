@@ -21,6 +21,15 @@ const deleteRole = ($id) => {
 const createRole = (data) => {
     return axios.post('v1/roles',data)
 }
+const updateRole = ($id,data) =>{
+    return axios.put(`v1/roles/${$id}`,data)
+    .then(response => {
+        return response.data;
+      })
+    .catch(error => {
+        throw error;  
+    })
+}
 export default{
-    getRole,deleteRole,createRole
+    getRole,deleteRole,createRole,updateRole
 }

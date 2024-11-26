@@ -18,7 +18,7 @@
                             </v-btn>
                        </template>
                        <v-card class="card-shadow border-radius-xl">
-                           <form @submit.prevent="handleSubmit">
+                           <form @submit.prevent="handleSubmitUpdate">
                                <div class="card-header-padding card-border-bottom">
                                    <span class="font-weight-bold text-h5 text-typo mb-0">
                                         Crear un nuevo Rol
@@ -118,16 +118,13 @@ export default{
         }
     },
     methods:{
-    close() {
-      this.dialog = false;
-    },
-    handleSubmit() {
-      this.$emit('submit', this.data);
-    },
-    reset(){
-        this.data.nombre ='';
-        this.data.descripcion = '';
-    }
+        close() {
+            this.dialog = false;
+        },
+        handleSubmitUpdate() {
+            this.$emit('submit', this.data);
+            this.close();
+        },
     },
     props:{
         data:{

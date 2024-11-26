@@ -51,7 +51,7 @@
                       >
                       Eliminar
                     </v-btn>
-                    <EditRole :data="billing" @submit="handleFormSubmit"/>
+                    <EditRole :data="billing" @submit="handleSubmitUpdate"/>
                   </div>
                 </v-list-item-content>
               </v-list-item>
@@ -97,9 +97,8 @@ export default {
         if (result.isConfirmed) {
           rolesService.deleteRole(rol)
           .then(() => {
-                    console.log(billings);
+                    this.billings = this.billings.filter(item => item.id_rol !== rol);
                     this.$swal.fire("Registro Eliminado!", "El Rol fue eliminado exitosamente", "success");
-                  
                 })
           .catch((error) => {
                   this.$swal.fire("Error", "No se pudo eliminar el Rol", "error");
@@ -111,8 +110,22 @@ export default {
          rolesService.createRole(formData)
          .then(response => {
               this.billings.push(response.data);
-              this.$refs.roleForm.close();
-              this.$refs.roleForm.reset();
+              this.$refs.createRole.close();
+              this.$refs.createRole.reset();
+          })
+          .catch(error => {
+                throw error;  
+          });
+        
+    },
+    handleSubmitUpdate(formData) {
+         rolesService.updateRole(formData.id_rol,formData)
+         .then(response => {
+              const index = this.billings.findIndex(item => item.id_rol === formData.id_rol);
+              if (index !== -1) {
+                  this.$set(this.billings, index, { ...this.billings[index], ...formData });
+              }
+              this.$refs.editRole.close();
           })
           .catch(error => {
                 throw error;  
