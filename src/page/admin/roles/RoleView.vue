@@ -4,6 +4,11 @@
       
       <v-col lg="12">
         <v-row>
+            <v-col lg="12" class="d-flex justify-end">
+              <CreateRole ref="createRole" :form="form" @submit="handleFormSubmit"/>
+            </v-col>
+        </v-row>
+        <v-row>
           <v-col md="6" v-for="billing in billings" :key="billing.id_rol">
             <v-card class="mb-3 card-shadow border-radius-xl py-4">
               <v-row no-gutters class="px-4">
@@ -114,6 +119,7 @@ export default {
                     this.$swal.fire("Registro Eliminado!", "El Rol fue eliminado exitosamente", "success");
                 })
           .catch((error) => {
+                  console.log(this.billings);
                   this.$swal.fire("Error", "No se pudo eliminar el Rol", "error");
               });
       }
