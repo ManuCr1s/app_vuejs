@@ -183,7 +183,6 @@
       <v-row>
         <v-col cols="6" class="pb-0">
           <v-select
-            :items="languages"
             label="Estado de productor"
             color="#e91e63"
             class="font-size-input input-style"

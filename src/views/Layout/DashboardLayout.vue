@@ -36,10 +36,10 @@
         :toggle-active="drawer"
       ></app-bar>
       <fade-transition :duration="200" origin="center top" mode="out-in">
-        <!-- your content here -->
+      
         <router-view></router-view>
       </fade-transition>
-      <content-footer v-if="!$route.meta.hideFooter"></content-footer>
+      <!-- <content-footer v-if="!$route.meta.hideFooter"></content-footer> -->
       <v-btn
         :ripple="false"
         icon
@@ -60,14 +60,14 @@
         <v-icon size="20">fa fa-cog py-2</v-icon>
       </v-btn>
 
-      <settings-drawer
+      <!-- <settings-drawer
         :showSettingsDrawer="showSettingsDrawer"
         @toggleSettingsDrawer="toggleSettingsDrawer"
         @updateSidebarColor="updateSidebarColor"
         @updateSidebarTheme="updateSidebarTheme"
         @toggleNavbarPosition="toggleNavbarPosition"
       >
-      </settings-drawer>
+      </settings-drawer> -->
     </v-main>
   </v-app>
 </template>
@@ -95,7 +95,7 @@ import { FadeTransition } from "vue2-transitions";
 import Drawer from "@/components/Drawer.vue";
 import AppBar from "@/components/AppBar.vue";
 import ContentFooter from "@/components/Footer.vue";
-import SettingsDrawer from "@/components/Widgets/SettingsDrawer.vue";
+// import SettingsDrawer from "@/components/Widgets/SettingsDrawer.vue";
 
 export default {
   components: {
@@ -103,7 +103,7 @@ export default {
     FadeTransition,
     Drawer,
     AppBar,
-    SettingsDrawer,
+    // SettingsDrawer,
   },
   data() {
     return {

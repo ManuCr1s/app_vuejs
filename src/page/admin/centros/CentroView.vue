@@ -4,7 +4,7 @@
       <v-col md="12">
         <v-row>
             <v-col lg="12" class="d-flex justify-end">
-              <CreateCentro ref="createRole" :form="form" @submit="handleFormSubmit"/>
+              <CreateCentro ref="createCentro" :form="form" @submit="handleFormSubmit"/>
             </v-col>
         </v-row>
         <v-row>
@@ -55,7 +55,7 @@
                         >
                         Eliminar
                       </v-btn>
-                      <EditRole :data="billing" @submit="handleSubmitUpdate"/>
+                      <EditCentro :data="billing" @submit="handleSubmitUpdate"/>
                 </v-col>
               </v-row>
               <hr class="dark horizontal mt-3 mb-4" />
@@ -87,11 +87,11 @@ export default {
   methods:{
     showCancelAlert(rol) {
       this.$swal({
-        title: "¿Esta seguro de eliminar el Centro?",
+        title: "¿Esta seguro de eliminar el Centro Poblado?",
         text: "",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonText: "Si, ELiminar Rol",
+        confirmButtonText: "Si, Eliminar Centro Poblado",
         customClass: {
           confirmButton: "btn bg-gradient-success",
           cancelButton: "btn bg-gradient-danger",
@@ -99,22 +99,39 @@ export default {
       }).then(async (result) => {
         if (result.isConfirmed) {
           await centroService.deleteCentro(rol);
-          this.$swal.fire("Registro Eliminado!", "El Centro fue eliminado exitosamente", "success");
+          this.$swal.fire("Registro Eliminado!", "El centro poblado fue eliminado exitosamente", "success");
         }
       });
     },
     handleFormSubmit(formData) {
-      centroService.createCentro(formData)
+         rolesService.createCentro(formData)
          .then(response => {
               this.billings.push(response.data);
-              this.$refs.roleForm.close();
-              this.$refs.roleForm.reset();
+              this.$refs.createCentro.close();
+              this.$refs.createCentro.reset();
+              this.$swal.fire("Registro Agregado!", "El centro poblado fue agregado exitosamente", "success");
+          })
+          .catch(error => {
+                this.$swal.fire("Error", "No se pudo eliminar el centro poblado"+error, "error");
+                throw error;  
+          });
+        
+    },
+    handleSubmitUpdate(formData) {
+         rolesService.updateRole(formData.id_rol,formData)
+         .then(response => {
+              const index = this.billings.findIndex(item => item.id_rol === formData.id_rol);
+              if (index !== -1) {
+                  this.$set(this.billings, index, { ...this.billings[index], ...formData });
+              }
+              this.$swal.fire("Registro Actualizado!", "El centro poblado fue actualizado exitosamente", "success");
+              this.$refs.editRole.close();
           })
           .catch(error => {
                 throw error;  
           });
         
-    }
+    },
   },
   data: function () {
     return {

@@ -40,7 +40,6 @@
       <v-row class="mt-0">
         <v-col sm="4" cols="12">
           <v-select
-            :items="gender"
             label="Seleccione provincia"
             color="#e91e63"
             class="font-size-input input-style"
@@ -52,7 +51,6 @@
         <v-col sm="4" cols="12">
 
           <v-select
-            :items="gender"
             label="Seleccione distrito"
             color="#e91e63"
             class="font-size-input input-style"
@@ -63,7 +61,6 @@
         </v-col>
         <v-col sm="4" cols="12">
           <v-select
-            :items="gender"
             label="Seleccione centro poblado"
             color="#e91e63"
             class="font-size-input input-style"
@@ -121,10 +118,6 @@
         type: Boolean,
         required: false,
         default: false,
-      },
-      form: {
-        type: Object,
-        required: true,
       },
     },
   };

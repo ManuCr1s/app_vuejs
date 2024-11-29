@@ -125,7 +125,6 @@
       <v-row>
         <v-col cols="6" class="pb-0">
           <v-select
-            :items="languages"
             label="Seleccione rol"
             color="#e91e63"
             class="font-size-input input-style"
@@ -136,7 +135,6 @@
         </v-col>
         <v-col cols="6" class="pb-0">
           <v-select
-            :items="languages"
             label="Estado de productor"
             color="#e91e63"
             class="font-size-input input-style"
@@ -156,6 +154,11 @@ export default {
   name: "UserForm",
   data() {
     return {
+      form: {
+        dni: '', // Propiedades dentro del formulario
+        name: '',
+        email: '',
+      },
       password: "",
       confirmPassword: "",
       rules: {
@@ -192,10 +195,7 @@ export default {
       required: false,
       default: false,
     },
-    form: {
-      type: Object,
-      required: true,
-    },
+
   },
 };
 </script>

@@ -21,7 +21,7 @@
                            <form @submit.prevent="handleSubmitUpdate">
                                <div class="card-header-padding card-border-bottom">
                                    <span class="font-weight-bold text-h5 text-typo mb-0">
-                                        Crear un nuevo Rol
+                                        Editar Rol
                                    </span>
                                </div>
                                <v-card-text class="card-padding">
@@ -45,7 +45,10 @@
                                        placeholder="Nombre de Rol"
                                        v-model="data.nombre"
                                        autocomplete="name"
+                                       @input="data.nombre = data.nombre.toUpperCase()"
                                        ></v-text-field>
+                                       <p v-if="errors.nombre" class="text-danger ml-3">{{ errors.nombre }}</p>
+
                                    </v-col>
                                    <v-col cols="12">
                                        <v-textarea
@@ -63,7 +66,9 @@
                                            input-icon
                                        "
                                        v-model="data.descripcion"
+                                       @input="data.descripcion = data.descripcion.toUpperCase()"
                                        ></v-textarea>
+                                       <p v-if="errors.descripcion" class="text-danger ml-3">{{ errors.descripcion }}</p>
                                    </v-col>
                                    </v-row>
                                </v-container>
@@ -114,14 +119,38 @@ export default{
             data: {
                 nombre: '',
                 descripcion: ''
+            },
+            errors: {
+                nombre: null,
+                descripcion: null
             }
-        }
+        };
     },
     methods:{
         close() {
             this.dialog = false;
         },
+        validateData() {
+            this.errors.nombre = null;
+            this.errors.descripcion = null;
+
+            let isValid = true;
+            if (!this.data.nombre.trim()) {
+                this.errors.nombre = 'Nombre de rol es obligatorio.';
+                isValid = false;
+            }
+
+            if (!this.data.descripcion.trim()) {
+                this.errors.descripcion = 'Descripción es obligatorio.';
+                isValid = false;
+            }
+
+            return isValid;
+        },
         handleSubmitUpdate() {
+            if (!this.validateData()) {
+                return;
+            }
             this.$emit('submit', this.data);
             this.close();
         },

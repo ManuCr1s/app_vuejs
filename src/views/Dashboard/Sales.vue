@@ -316,6 +316,7 @@ import CardChartChannels from "./Widgets/CardChartChannels.vue";
 import CardChartRevenue from "./Widgets/CardChartRevenue.vue";
 import CardChartSalesAge from "./Widgets/CardChartSalesAge.vue";
 import {mapState} from 'vuex';
+
 export default {
   name: "Sales",
   components: {
@@ -323,6 +324,7 @@ export default {
     CardChartRevenue,
     CardChartSalesAge,
   },
+  
   computed:{
       ...mapState(['auth'])
   },
