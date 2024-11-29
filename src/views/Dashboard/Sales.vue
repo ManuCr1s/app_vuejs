@@ -349,34 +349,109 @@ export default {
       ],
       countries: [
         {
-          avatar: require("@/assets/img/icons/flags/US.png"),
           country: "CHAUPIMARCA",
           sales: "61",
           bounce: "29",
         },
         {
-          avatar: require("@/assets/img/icons/flags/DE.png"),
           country: "HUACHÓN",
           sales: "39",
           bounce: "40",
         },
         {
-          avatar: require("@/assets/img/icons/flags/GB.png"),
           country: "HUARIACA",
           sales: "14",
           bounce: "23",
         },
         {
-          avatar: require("@/assets/img/icons/flags/BR.png"),
           country: "HUAYLLAY",
           sales: "56",
           bounce: "32",
         },
         {
-          avatar: require("@/assets/img/icons/flags/AU.png"),
           country: "NINACACA",
           sales: "40",
           bounce: "56",
+        },
+        {
+          country: "PALLANCHACRA",
+          sales: "11",
+          bounce: "42",
+        },
+        {
+          country: "PAUCARTAMBO",
+          sales: "22",
+          bounce: "17",
+        },
+        {
+          country: "S.F.A. DE YARUSYACÁN",
+          sales: "37",
+          bounce: "32",
+        },
+        {
+          country: "SIMÓN BOLÍVAR",
+          sales: "21",
+          bounce: "35",
+        },
+        {
+          country: "TICLACAYÁN",
+          sales: "11",
+          bounce: "28",
+        },
+        {
+          country: "TINYAHUARCO",
+          sales: "43",
+          bounce: "36",
+        },
+        {
+          country: "VICCO",
+          sales: "31",
+          bounce: "19",
+        },
+        {
+          country: "YANACANCHA",
+          sales: "20",
+          bounce: "15",
+        },
+        {
+          country: "YANAHUANCA",
+          sales: "18",
+          bounce: "15",
+        },
+        {
+          country: "CHACAYÁN",
+          sales: "28",
+          bounce: "14",
+        },
+        {
+          country: "GOYLLARISQUIZGA",
+          sales: "33",
+          bounce: "15",
+        },
+        {
+          country: "PAUCAR",
+          sales: "28",
+          bounce: "9",
+        },
+        {
+          country: "SAN PEDRO DE PILLAO",
+          sales: "17",
+          bounce: "23",
+        },
+        {
+          country: "SANTA ANA DE TUSI",
+          sales: "10",
+          bounce: "15",
+        },
+        {
+          country: "TAPUC",
+          sales: "13",
+          bounce: "18",
+        },
+        {
+          country: "VILCABAMBA",
+          sales: "22",
+          bounce: "32",
         },
       ],
       products: [

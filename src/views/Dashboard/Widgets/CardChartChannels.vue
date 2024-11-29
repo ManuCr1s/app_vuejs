@@ -100,16 +100,23 @@
         color="#cb0c9f"
         class="font-weight-bold text-body bg-lighter py-5 px-6 my-auto ms-auto"
         small
+        @click="goToProductores"
       >
         Ver más
       </v-btn>
     </div>
   </v-card>
 </template>
+
 <script>
 import Chart from "chart.js/auto";
 
 export default {
+  methods: {
+    goToProductores() {
+      this.$router.push('/productores'); // Redirige a productores
+    },
+  },
   name: "card-channels",
   data: function () {
     return {

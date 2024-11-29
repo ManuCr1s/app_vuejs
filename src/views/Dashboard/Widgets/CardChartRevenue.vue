@@ -75,7 +75,7 @@ export default {
             borderWidth: 4,
             backgroundColor: "transparent",
             fill: true,
-            data: [50, 100, 200, 190, 400, 350, 500, 450, 610, 700],
+            data: [50, 100, 200, 190, 400, 350, 500, 450, 610, 700, 716],
             maxBarThickness: 6,
           },
           {
@@ -88,7 +88,7 @@ export default {
             borderWidth: 4,
             backgroundColor: "transparent",
             fill: true,
-            data: [10, 30, 40, 120, 150, 220, 280, 250, 280],
+            data: [10, 30, 40, 120, 150, 220, 280, 250, 280, 317, 329],
             maxBarThickness: 6,
           },
         ],
