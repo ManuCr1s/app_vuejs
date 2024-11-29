@@ -46,7 +46,10 @@
                                        placeholder="Nombre de Rol"
                                        v-model="form.nombre"
                                        autocomplete="name"
-                                       ></v-text-field>
+                                       @input="form.nombre = form.nombre.toUpperCase()"
+                                       >
+                                    </v-text-field>
+                                       <p v-if="errors.nombre" class="text-danger ml-3">{{ errors.nombre }}</p>
                                    </v-col>
                                    <v-col cols="12">
                                        <v-textarea
@@ -55,7 +58,7 @@
                                        filled
                                        solo  
                                        hide-details
-                                       placeholder="Ingrese Descripcion"
+                                       placeholder="Ingrese Descripción"
                                        class="
                                            input-style
                                            font-size-input
@@ -64,7 +67,9 @@
                                            input-icon
                                        "
                                        v-model="form.descripcion"
+                                       @input="form.descripcion = form.descripcion.toUpperCase()"
                                        ></v-textarea>
+                                       <p v-if="errors.descripcion" class="text-danger ml-3">{{ errors.descripcion }}</p>
                                    </v-col>
                                    </v-row>
                                </v-container>
@@ -107,37 +112,63 @@
     </v-dialog>
 </template>
 <script>
-export default{
-    name:'CreateRole',
-    data(){
+export default {
+    name: 'CreateRole',
+    data() {
         return {
-            dialog:false,
+            dialog: false,
             form: {
                 nombre: '',
                 descripcion: ''
+            },
+            errors: {
+                nombre: null,
+                descripcion: null
             }
-        }
+        };
     },
-    methods:{
+    methods: {
         close() {
             this.dialog = false;
         },
+        validateForm() {
+            this.errors.nombre = null;
+            this.errors.descripcion = null;
+
+            let isValid = true;
+            if (!this.form.nombre.trim()) {
+                this.errors.nombre = 'Nombre de rol es obligatorio.';
+                isValid = false;
+            }
+
+            if (!this.form.descripcion.trim()) {
+                this.errors.descripcion = 'Descripción es obligatorio.';
+                isValid = false;
+            }
+
+            return isValid;
+        },
         handleSubmit() {
+            if (!this.validateForm()) {
+                return;
+            }
+
             this.$emit('submit', this.form);
             this.reset();
             this.close();
-
         },
-        reset(){
-            this.form.nombre ='';
+        reset() {
+            this.form.nombre = '';
             this.form.descripcion = '';
+            this.errors.nombre = null;
+            this.errors.descripcion = null;
         }
     },
-    props:{
-        form:{
-            type:Object,
-            required:true
-        },
+    props: {
+        form: {
+            type: Object,
+            required: true
+        }
     }
-}
+};
 </script>

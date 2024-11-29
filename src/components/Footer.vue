@@ -158,49 +158,49 @@
   </div>
 </template>
 <script>
-// export default {
-//   name: "content-footer",
-//   props: {
-//     auth: Boolean,
-//   },
-//   data() {
-//     return {
-//       footer: [
-//         {
-//           linkName: "Creative Tim",
-//           link: "https://www.creative-tim.com/",
-//         },
-//         {
-//           linkName: "About Us",
-//           link: "https://www.creative-tim.com/presentation",
-//         },
-//         {
-//           linkName: "Blog",
-//           link: "http://blog.creative-tim.com/",
-//         },
-//         {
-//           linkName: "License",
-//           link: "https://www.creative-tim.com/license",
-//         },
-//       ],
-//       icons: [
-//         {
-//           icon: "fab fa-dribbble",
-//         },
-//         {
-//           icon: "fab fa-twitter",
-//         },
-//         {
-//           icon: "fab fa-instagram",
-//         },
-//         {
-//           icon: "fab fa-pinterest",
-//         },
-//         {
-//           icon: "fab fa-github",
-//         },
-//       ],
-//     };
-//   },
-// };
+export default {
+  name: "content-footer",
+  props: {
+    auth: Boolean,
+  },
+  // data() {
+  //   return {
+  //     footer: [
+  //       {
+  //         linkName: "Creative Tim",
+  //         link: "https://www.creative-tim.com/",
+  //       },
+  //       {
+  //         linkName: "About Us",
+  //         link: "https://www.creative-tim.com/presentation",
+  //       },
+  //       {
+  //         linkName: "Blog",
+  //         link: "http://blog.creative-tim.com/",
+  //       },
+  //       {
+  //         linkName: "License",
+  //         link: "https://www.creative-tim.com/license",
+  //       },
+  //     ],
+  //     icons: [
+  //       {
+  //         icon: "fab fa-dribbble",
+  //       },
+  //       {
+  //         icon: "fab fa-twitter",
+  //       },
+  //       {
+  //         icon: "fab fa-instagram",
+  //       },
+  //       {
+  //         icon: "fab fa-pinterest",
+  //       },
+  //       {
+  //         icon: "fab fa-github",
+  //       },
+  //     ],
+  //   };
+  // },
+};
 </script>
