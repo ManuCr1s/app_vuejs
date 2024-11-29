@@ -10,14 +10,13 @@ const getCentro = () => {
             });
 }
 const deleteCentro = ($id) => {
-    return axios.delete('v1/centros/${$id}'
+    return axios.delete(`v1/centros/${$id}`)
         .then(response => {
             return response.data;
           })
         .catch(error => {
             throw error;  
         })
-    )
 
 }
 const createCentro = (data) => {
