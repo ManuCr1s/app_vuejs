@@ -36,7 +36,13 @@
             class="font-size-input input-style"
             single-line
             height="36"
+            :items="province"
+            item-text="nombre" 
+            item-value="id_province" 
+            v-model="selectedProvince"
+            @change="fetchDistrict"
           >
+    
           </v-select>
         </v-col>
         <v-col sm="4" cols="12">
@@ -47,6 +53,11 @@
             class="font-size-input input-style"
             single-line
             height="36"
+            :items="districts"
+            item-text="nombre"
+            item-value="id_districts"
+            v-model="selectedDistrict"
+            :disabled="!selectedProvince"
           >
           </v-select>
         </v-col>
@@ -107,19 +118,21 @@
   </template>
   
   <script>
+  import ubicacionService from '../../modules/services/ubicacionService';
   export default {
     name: "CentroForm",
     data() {
       return {
         fileName: "",
         dialog: false,
-        form: {
-
-        },
+        form: {},
+        province: {},
+        districts: {},
         errors: {
                 nombre: null,
                 descripcion: null
-            }
+            },
+        selectedProvince:null
       };
     },
     methods: {
@@ -164,6 +177,14 @@
         required: true,
       },
     },
+    async mounted(){
+      try {
+        this.province = await ubicacionService.getProvince();
+        this.districts = await ubicacionService.getDistricts();
+      } catch (error) {
+        this.error = 'Hubo un problema al obtener los centros poblados';
+      }
+  },
   };
   </script>
   
