@@ -18,14 +18,14 @@
         <v-list-item-title class="title d-flex align-center mb-0">
           <div class="v-navigation-drawer-brand pa-5 d-flex align-center">
             <v-img
-              src="@/assets/img/logo-ct-white.png"
+              src="@/assets/img/llamalogo.png"
               class="navbar-brand-img ms-3"
               width="32"
               v-if="sidebarTheme == 'dark'"
             >
             </v-img>
             <v-img
-              src="@/assets/img/logo-ct.png"
+              src="@/assets/img/llamalogo_bk.png"
               class="navbar-brand-img ms-3"
               width="32"
               v-else
