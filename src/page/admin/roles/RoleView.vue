@@ -127,14 +127,14 @@ export default {
     },
     handleFormSubmit(formData) {
          rolesService.createRole(formData)
-         .then(response => {
-              this.billings.push(response.data);
+         .then((response) => {
               this.$refs.createRole.close();
               this.$refs.createRole.reset();
               this.$swal.fire("Registro Agregado!", "El Rol fue agregado exitosamente", "success");
+              this.billings.push(response.data);
           })
           .catch(error => {
-                this.$swal.fire("Error", "No se pudo eliminar el Rol"+error, "error");
+                this.$swal.fire("Error", "No se pudo crear el Rol"+error, "error");
                 throw error;  
           });
         
